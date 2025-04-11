@@ -10,7 +10,7 @@
   
   <meta name="author" content="kakebe.com">
 
-  <title>Bingo | Responsive Multipurpose Parallax HTML5 Template</title>
+  <title> The Unlimited Youths</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -33,6 +33,19 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">  
+
+  <style>
+	.col-sm-3 ul li a i {
+    font-size: 24px;
+    color: #555;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.col-sm-3 ul li a i:hover {
+    color: #007bff;
+}
+  </style>
 
 </head>
 
@@ -67,7 +80,7 @@ Fixed Navigation
 	  <nav class="navbar navbar-expand-lg navbar-light">
 		<!-- logo -->
 		<a class="navbar-brand logo" href="index.html">
-			<h5>
+			<h5 style="color: #007bff;">
 				The Unlimited Youth.
 			</h5>
 		</a>
@@ -128,8 +141,8 @@ End Fixed Navigation
 			<div class="col-md-12">
 				<h2>Contact Us</h2>
 				<ol class="breadcrumb header-bradcrumb">
-				  <li><a href="index.html">Home</a></li>
-				  <li class="active">Contact Us</li>
+				  <!-- <li><a href="index.html">Home</a></li>
+				  <li class="active">Contact Us</li> -->
 				</ol>
 			</div>
 		</div>
@@ -144,47 +157,57 @@ End Fixed Navigation
 			
 			<!-- section title -->
 			<div class="col-12">
-			<div class="title text-center" >
-				<h2>Get In Touch</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis eveniet maiores ab maxime nam ut numquam molestiae quaerat incidunt?</p>
-				<div class="border"></div>
-			</div>
+				<div class="title text-center">
+					<h2>Get In Touch</h2>
+					<p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+					<div class="border"></div>
+				  </div>
+				  
 			</div>
 			<!-- /section title -->
 			
 			<!-- Contact Details -->
-			<div class="contact-details col-md-6 " >
-				<h3>Contact Details</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
-				<ul class="contact-short-info" >
-					<li>
-						<i class="tf-ion-ios-home"></i>
-						<span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
-					</li>
-					<li>
-						<i class="tf-ion-android-phone-portrait"></i>
-						<span>Phone: +880-31-000-000</span>
-					</li>
-					<li>
-						<i class="tf-ion-android-globe"></i>
-						<span>Fax: +880-31-000-000</span>
-					</li>
-					<li>
-						<i class="tf-ion-android-mail"></i>
-						<span>Email: hello@meghna.com</span>
-					</li>
-				</ul>
-				<!-- Footer Social Links -->
-				<div class="social-icon">
-					<ul>
-						<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-						<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-						<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-						<li><a href="#"><i class="tf-ion-social-linkedin-outline"></i></a></li>
+			<div class="col-md-6 mb-4">
+				<div class="card" style="background-color: #e6f7ff;">
+				  <div class="card-body">
+					<h3 class="card-title">Contact Details</h3>
+					<p class="card-text">
+					  Feel free to reach out to us through any of the channels below—we're here to support and connect with you.
+					</p>
+			  
+					<ul class="list-unstyled contact-short-info">
+					  <li class="mb-2">
+						<i class="tf-ion-ios-home" style="color: #003366;"></i>
+						<span>Obote Avenue, Lira City, Uganda</span>
+					  </li>
+					  <li class="mb-2">
+						<i class="tf-ion-android-phone-portrait" style="color: #003366;"></i>
+						<span>Phone: +256 777 366 181</span>
+					  </li>
+					  <li class="mb-2">
+						<i class="tf-ion-android-phone-portrait" style="color: #003366;"></i>
+						<span>Phone: +256 700 000 000</span>
+					  </li>
+					  <li class="mb-2">
+						<i class="tf-ion-android-mail" style="color: #003366;"></i>
+						<span>Email: info@tuy.com</span>
+					  </li>
 					</ul>
+			  
+					<!-- Footer Social Links -->
+					<div class="social-icon mt-3">
+					  <ul class="list-inline">
+						<li class="list-inline-item"><a href="#"><i class="tf-ion-social-facebook" style="color: #003366;"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="tf-ion-social-twitter" style="color: #003366;"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="tf-ion-social-dribbble-outline" style="color: #003366;"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="tf-ion-social-linkedin-outline" style="color: #003366;"></i></a></li>
+					  </ul>
+					</div>
+					<!-- End Footer Social Links -->
+				  </div>
 				</div>
-				<!--/. End Footer Social Links -->
-			</div>
+			  </div>
+			  
 			<!-- / End Contact Details -->
 				
 			<!-- Contact Form -->
@@ -252,27 +275,29 @@ End Fixed Navigation
       </ul>
       </div>
       <!-- End of .col-sm-3 -->
-  
-      <div class="col-sm-3 col-md-3 col-lg-3">
-      <ul>
-        <li><h3>Quick Links</h3></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">FAQ’s</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-      </div>
+	  <div class="col-sm-3 col-md-3 col-lg-3">
+		<ul>
+		  <li><h3>Quick Links</h3></li>
+		  <li><a href="index.html#partners">Partners</a></li>
+		  <li><a href="about.html">About Us</a></li>
+		  <li><a href="get-involved.html">Volunteer</a></li>
+		  <li><a href="index.html#faq">FAQ’s</a></li>
+		  <li><a href="contact.html">Contact Us</a></li>
+		</ul>
+	  </div>
+	  
       <!-- End of .col-sm-3 -->
-  
-      <div class="col-sm-3 col-md-3 col-lg-3">
-      <ul>
-        <li><h3>Connect with Us</h3></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-      </div>
+	  <div class="col-sm-3 col-md-3 col-lg-3">
+		<ul>
+			<li><h3>Connect with Us</h3></li>
+			<li><a href="https://wa.me/256777366181" target="_blank"><i class="tf-ion-social-whatsapp"></i></a></li>
+			<li><a href="https://x.com/tuy_ug" target="_blank"><i class="tf-ion-social-twitter"></i></a></li>
+			<li><a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank"><i class="tf-ion-social-facebook"></i></a></li>
+			<li><a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank"><i class="tf-ion-social-youtube"></i></a></li>
+			<li><a href="https://www.instagram.com/theunlimitedyouths?igsh=dHgxcWxnaThsdXRx" target="_blank"><i class="tf-ion-social-instagram"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>
+		</ul>
+	  </div>
       <!-- End of .col-sm-3 -->
   
     </div>

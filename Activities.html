@@ -61,6 +61,19 @@
 		]
 	  }
 	</script>
+
+	<style>
+		.col-sm-3 ul li a i {
+		font-size: 24px;
+		color: #555;
+		margin-right: 10px;
+		transition: color 0.3s ease;
+	}
+	
+	.col-sm-3 ul li a i:hover {
+		color: #007bff;
+	}
+	  </style>
   </head>
   
 <body id="body">
@@ -95,7 +108,7 @@ Fixed Navigation
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<!-- logo -->
 			<a class="navbar-brand logo" href="index.html">
-				<h5>The Unlimited Youth</h5>
+				<h5 style="color: #007bff;">The Unlimited Youth</h5>
 			</a>
 			<!-- /logo -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -153,8 +166,8 @@ Fixed Navigation
 			<div class="col-md-12">
 				<h2>Our Activities</h2>
 				<ol class="breadcrumb header-bradcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li class="active">Our Activities</li>
+					<!-- <li><a href="index.html">Home</a></li>
+					<li class="active">Our Activities</li> -->
 				</ol>
 			</div>
 		</div>
@@ -177,78 +190,88 @@ Fixed Navigation
 			<!-- /Section Title -->
 
 			<!-- Activity Item 1 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 color-bg text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-book-outline"></i>
+			<div class="container py-5">
+				<div class="row">
+				  <!-- Card 1 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-book-outline" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Interactive Art & Craft Workshops</h5>
+						<p class="card-text">We provide a dynamic platform for the youth to explore their artistic potential through hands-on art and craft workshops, fostering creativity and collaboration.</p>
+					  </div>
 					</div>
-					<h3>Interactive Art & Craft Workshops</h3>
-					<p>We provide a dynamic platform for the youth to explore their artistic potential through hands-on art and craft workshops, fostering creativity and collaboration.</p>
-				</div>
-			</div>
-			<!-- End Activity Item 1 -->
-
-			<!-- Activity Item 2 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-people-outline"></i>
+				  </div>
+			  
+				  <!-- Card 2 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-people-outline" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Leadership Development Programs</h5>
+						<p class="card-text">Our leadership programs aim to empower young minds to take on challenges and lead in both their communities and professional endeavors, encouraging initiative and responsibility.</p>
+					  </div>
 					</div>
-					<h3>Leadership Development Programs</h3>
-					<p>Our leadership programs aim to empower young minds to take on challenges and lead in both their communities and professional endeavors, encouraging initiative and responsibility.</p>
-				</div>
-			</div>
-			<!-- End Activity Item 2 -->
-
-			<!-- Activity Item 3 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 color-bg text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-briefcase-outline"></i>
+				  </div>
+			  
+				  <!-- Card 3 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-briefcase-outline" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Entrepreneurship and Innovation</h5>
+						<p class="card-text">Our entrepreneurship programs nurture young innovators by guiding them to launch sustainable projects, providing them with the resources and skills to succeed in the business world.</p>
+					  </div>
 					</div>
-					<h3>Entrepreneurship and Innovation</h3>
-					<p>Our entrepreneurship programs nurture young innovators by guiding them to launch sustainable projects, providing them with the resources and skills to succeed in the business world.</p>
-				</div>
-			</div>
-			<!-- End Activity Item 3 -->
-
-			<!-- Activity Item 4 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-crop"></i>
+				  </div>
+			  
+				  <!-- Card 4 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-crop" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Environmental Awareness Initiatives</h5>
+						<p class="card-text">We engage the youth in environmental conservation through community projects that highlight the importance of sustainability, green technology, and eco-friendly practices.</p>
+					  </div>
 					</div>
-					<h3>Environmental Awareness Initiatives</h3>
-					<p>We engage the youth in environmental conservation through community projects that highlight the importance of sustainability, green technology, and eco-friendly practices.</p>
-				</div>
-			</div>
-			<!-- End Activity Item 4 -->
-
-			<!-- Activity Item 5 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 color-bg text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-heart-outline"></i>
+				  </div>
+			  
+				  <!-- Card 5 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-heart-outline" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Health & Wellness Programs</h5>
+						<p class="card-text">We promote physical and mental well-being by organizing health and wellness programs, including fitness challenges, mental health workshops, and mindfulness activities.</p>
+					  </div>
 					</div>
-					<h3>Health & Wellness Programs</h3>
-					<p>We promote physical and mental well-being by organizing health and wellness programs, including fitness challenges, mental health workshops, and mindfulness activities.</p>
-				</div>
-			</div>
-			<!-- End Activity Item 5 -->
-
-			<!-- Activity Item 6 -->
-			<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-				<div class="activity-block p-4 text-center">
-					<div class="activity-icon text-center">
-						<i class="tf-ion-ios-alarm-outline"></i>
+				  </div>
+			  
+				  <!-- Card 6 -->
+				  <div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
+					  <div class="card-body">
+						<div class="mb-3">
+						  <i class="tf-ion-ios-alarm-outline" style="font-size: 2rem;"></i>
+						</div>
+						<h5 class="card-title">Community Outreach & Volunteering</h5>
+						<p class="card-text">Our community outreach programs are designed to empower the youth to give back through volunteerism, providing opportunities to make a tangible impact on society.</p>
+					  </div>
 					</div>
-					<h3>Community Outreach & Volunteering</h3>
-					<p>Our community outreach programs are designed to empower the youth to give back through volunteerism, providing opportunities to make a tangible impact on society.</p>
+				  </div>
 				</div>
-			</div>
-			<!-- End Activity Item 6 -->
-		</div> <!-- End row -->
-	</div> <!-- End container -->
+			  </div>
+			  
 </section> <!-- End section -->
 
 
@@ -505,25 +528,26 @@ Fixed Navigation
 				</ul>
 			  </div>
 			  <!-- End of .col-sm-3 -->
-	  
 			  <div class="col-sm-3 col-md-3 col-lg-3">
 				<ul>
 				  <li><h3>Quick Links</h3></li>
-				  <li><a href="#">Partners</a></li>
-				  <li><a href="#">About Us</a></li>
-				  <li><a href="#">FAQ’s</a></li>
-				  <li><a href="#">Contact Us</a></li>
+				  <li><a href="index.html#partners">Partners</a></li>
+				  <li><a href="about.html">About Us</a></li>
+				  <li><a href="get-involved.html">Volunteer</a></li>
+				  <li><a href="index.html#faq">FAQ’s</a></li>
+				  <li><a href="contact.html">Contact Us</a></li>
 				</ul>
 			  </div>
 			  <!-- End of .col-sm-3 -->
-	  
 			  <div class="col-sm-3 col-md-3 col-lg-3">
 				<ul>
-				  <li><h3>Connect with Us</h3></li>
-				  <li><a href="#">Facebook</a></li>
-				  <li><a href="#">Twitter</a></li>
-				  <li><a href="#">Instagram</a></li>
-				  <li><a href="#">LinkedIn</a></li>
+					<li><h3>Connect with Us</h3></li>
+					<li><a href="https://wa.me/256777366181" target="_blank"><i class="tf-ion-social-whatsapp"></i></a></li>
+					<li><a href="https://x.com/tuy_ug" target="_blank"><i class="tf-ion-social-twitter"></i></a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank"><i class="tf-ion-social-facebook"></i></a></li>
+					<li><a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank"><i class="tf-ion-social-youtube"></i></a></li>
+					<li><a href="https://www.instagram.com/theunlimitedyouths?igsh=dHgxcWxnaThsdXRx" target="_blank"><i class="tf-ion-social-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>
 				</ul>
 			  </div>
 			  <!-- End of .col-sm-3 -->
