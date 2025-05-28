@@ -1,559 +1,789 @@
 <!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Unlimited Youth is a creative platform for young individuals, offering interactive learning and community engagement through innovative web-based experiences;">
+    <meta name="keywords" content="Unlimited Youth, interactive learning, youth platform, community engagement, educational web app, innovative youth activities, web development, creative projects">
+    <meta name="author" content="Kakebe.com">
+    <title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
+    <meta property="og:description" content="Unlimited Youth is a platform that provides young people with the tools and community to engage in interactive learning, creativity, and personal growth.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.unlimitedyouth.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
+    <meta name="twitter:description" content="Unlimited Youth is a platform that provides young people with interactive learning, community engagement, and creative opportunities.">
+    <meta name="twitter:image" content="images/twitter-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="shortcut icon" type="image/x-icon" href="images/TUY_Logo.png">
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Unlimited Youth",
+        "url": "https://www.unlimitedyouth.com",
+        "logo": "https://www.unlimitedyouth.com/images/logo.png",
+        "description": "Unlimited Youth is an innovative platform that provides interactive learning and creative community experiences for young people.",
+        "sameAs": [
+            "https://www.facebook.com/UnlimitedYouth",
+            "https://twitter.com/UnlimitedYouth",
+            "https://www.instagram.com/UnlimitedYouth"
+        ]
+    }
+    </script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .col-sm-3 ul li a i {
+            font-size: 24px;
+            color: #555;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .col-sm-3 ul li a i:hover {
+            color: #007bff;
+        }
+        .faq.section-sm {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            padding: 60px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .faq .title h2 {
+            font-weight: 600;
+            color: #1a2a44;
+        }
+        .faq .title p {
+            color: #4a5f7a;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .accordion-item {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .accordion-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .accordion-button {
+            background-color: #ffffff;
+            color: #1a2a44;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 20px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .accordion-button::after {
+            content: '\002B';
+            font-size: 1.5rem;
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .accordion-button:not(.collapsed)::after {
+            content: '\2212';
+            transform: rotate(180deg);
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #2E7D32;
+            color: #ffffff;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        .accordion-body {
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #4a5f7a;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .btn-main {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-main:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+            color: #ffffff;
+        }
+        /* Partners Section Styles */
+        .partners.section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .partners .title h2 {
+            font-weight: 600;
+            color: #1a2a44;
+        }
+        .partners .title p {
+            color: #4a5f7a;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .partner-carousel .partner-item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .partner-carousel .partner-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .partner-carousel .partner-item i {
+            font-size: 50px;
+            color: #1976D2;
+            margin-bottom: 15px;
+        }
+        .partner-carousel .partner-item p {
+            color: #4a5f7a;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .partner-carousel .partner-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .partner-carousel .partner-item a:hover {
+            text-decoration: underline;
+        }
+        .partners .become-partner {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .partners .become-partner p {
+            color: #4a5f7a;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .slick-prev, .slick-next {
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: none;
+            background: #1976D2;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .slick-prev:before, .slick-next:before {
+            font-family: 'bootstrap-icons';
+            font-size: 24px;
+            line-height: 40px;
+            color: white;
+            opacity: 0.75;
+        }
+        .slick-prev {
+            left: -50px;
+        }
+        .slick-prev:before {
+            content: '\f284';
+        }
+        .slick-next {
+            right: -50px;
+        }
+        .slick-next:before {
+            content: '\f285';
+        }
+        @media (max-width: 768px) {
+            .partner-carousel .partner-item {
+                margin: 0 5px;
+            }
+            .slick-prev {
+                left: -30px;
+            }
+            .slick-next {
+                right: -30px;
+            }
+        }
+        /* Simple Footer */
+        .social-links a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
 
-<html> 
-	  <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
-		<!-- Meta description optimized for SEO -->
-		<meta name="description" content="Unlimited Youth is a creative platform for young individuals, offering interactive learning and community engagement through innovative web-based experiences.">
-	  
-		<!-- Meta keywords for better SEO -->
-		<meta name="keywords" content="Unlimited Youth, interactive learning, youth platform, community engagement, educational web app, innovative youth activities, web development, creative projects">
-	  
-		<meta name="author" content="Kakebe.com">
-	  
-		<!-- Title optimized for SEO -->
-		<title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
-	  
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	  
-		<!-- Open Graph Meta Tags for social sharing -->
-		<meta property="og:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
-		<meta property="og:description" content="Unlimited Youth is a platform that provides young people with the tools and community to engage in interactive learning, creativity, and personal growth.">
-		<meta property="og:image" content="images/og-image.jpg">
-		<meta property="og:url" content="https://www.unlimitedyouth.com">
-		<meta property="og:type" content="website">
-	  
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
-		<meta name="twitter:description" content="Unlimited Youth is a platform that provides young people with interactive learning, community engagement, and creative opportunities.">
-		<meta name="twitter:image" content="images/twitter-image.jpg">
-		<meta name="twitter:card" content="summary_large_image">
-	  
-		<!-- Favicon for branding -->
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-	  
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="plugins/themefisher-font/style.css"> <!-- Font Icon -->
-		<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"> <!-- Bootstrap -->
-		<link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css"> <!-- Lightbox for images -->
-		<link rel="stylesheet" href="plugins/animate/animate.css"> <!-- Animation styles -->
-		<link rel="stylesheet" href="plugins/slick/slick.css"> <!-- Slick carousel styles -->
-		<link rel="stylesheet" href="css/style.css"> <!-- Main styles for the website -->
-	  
-		<!-- Structured Data (JSON-LD) for enhanced SEO -->
-		<script type="application/ld+json">
-		  {
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "Unlimited Youth",
-			"url": "https://www.unlimitedyouth.com",
-			"logo": "https://www.unlimitedyouth.com/images/logo.png",
-			"description": "Unlimited Youth is an innovative platform that provides interactive learning and creative community experiences for young people.",
-			"sameAs": [
-			  "https://www.facebook.com/UnlimitedYouth",
-			  "https://twitter.com/UnlimitedYouth",
-			  "https://www.instagram.com/UnlimitedYouth"
-			]
-		  }
-		</script>
-
-		<style>
-			.col-sm-3 ul li a i {
-			font-size: 24px;
-			color: #555;
-			margin-right: 10px;
-			transition: color 0.3s ease;
-		}
-		
-		.col-sm-3 ul li a i:hover {
-			color: #007bff;
-		}
-		  </style>
-	  </head>
-	  
-
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
 <body id="body">
-
- <!--
-  Start Preloader
-  ==================================== -->
-  <div id="preloader">
-    <div class='preloader'>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div id="preloader">
+        <div class='preloader'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-  </div> 
-  <!--
-  End Preloader
-  ==================================== -->
-
-
-  
-
-<!--
-Fixed Navigation
-==================================== -->
-
-<header class="navigation fixed-top">
-	
-	<div class="container">
-	  <!-- main nav -->
-	  <nav class="navbar navbar-expand-lg navbar-light">
-		<!-- logo -->
-		<a class="navbar-brand logo active" href="index.html">
-		  <h5 style="color: #007bff;">The Unlimited Youth</h5>
-		</a>
-		<!-- /logo -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-		  aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-  
-		<div class="collapse navbar-collapse" id="navigation">
-		  <ul class="navbar-nav ml-auto text-center">
-			<!-- Home -->
-			<li class="nav-item active">
-			  <a class="nav-link" href="index.html">Home</a> 
-			</li>
-			<!-- About Us -->
-			<li class="nav-item">
-			  <a class="nav-link" href="about.html">About Us</a>
-			</li>
-			<!-- Our Programs -->
-			<li class="nav-item">
-			  <a class="nav-link" href="Activities.html">Activities</a>
-			</li>
-			
-			<li class="nav-item">
-				<a class="nav-link" href="team.html">Team</a>
-			</li>
-		
-			<!-- Blog -->
-			<li class="nav-item">
-			  <a class="nav-link" href="blog.html">Blog</a>
-			</li>
-			<!-- Donate -->
-			<li class="nav-item">
-			  <a class="nav-link" href="portfolio.html">Projects</a>
-			</li>
-			<!-- Contact -->
-			<li class="nav-item">
-			  <a class="nav-link" href="contact.html">Contact</a>
-			</li>
-
-			<li class=" nav-item">
-				<a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-			</li>
-		  </ul>
-		</div>
-	  </nav>
-	  <!-- /main nav -->
-	</div>
-  </header>
-  
-<!--
-End Fixed Navigation
-==================================== -->
-  <div class="hero-slider">
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider_bg_1.jpg);">
-	  <div class="container">
-		<div class="row">
-		  <div class="col-md-12 text-center">
-			<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Empowering Youth for a <br> Sustainable Future</h1>
-			<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Join us in combating climate change through innovative education, hands-on programs, and global youth collaboration.</p>
-			<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="get-involved.html">Get Involved</a>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider_bg_2.jpg);">
-	  <div class="container">
-		<div class="row">
-		  <div class="col-md-12 text-center">
-			<h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Youth-Led Climate Action <br> for a Greener Tomorrow</h1>
-			<p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Discover how youth around the world are leading the way in sustainability, from reforestation to renewable energy innovation.</p>
-			<a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main" href="blog.html">Read Our Stories</a>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </div>
-
-<!--
-Start About Section
-==================================== -->
-	<section class="service-2 section">
-	<div class="container">
-	  <div class="row">
-	
-		<div class="col-12">
-		  <!-- section title -->
-		  <div class="title text-center">
-			<h2>What We Offer</h2>
-			<p>We offer a range of impactful programs and tools designed to empower youth in their journey to combat climate change. Explore how we bring creativity, collaboration, and innovation to the forefront of environmental education.</p>
-			<div class="border"></div>
-		  </div>
-		  <!-- /section title -->
-		</div>
-	
-		<div class="col-md-4 text-center">
-			<img src="images/WhatsApp Image 2025-03-31 at 17.56.09_6a033fc3.jpg" 
-				 class="inline-block mb-3" 
-				 alt="Youth Collaboration Image" 
-				 style="width: 375px; height: auto;">
-		  
-			<!-- New image below -->
-			
-			<img src="images/DSC_3414.JPG" 
-       class="inline-block" 
-       alt="Collaboration Visual" 
-       style="width: 375px; height: auto; margin-top: 110px;">
-</div>
-		  
-		
-		<div class="col-md-8">
-		  <div class="row text-center">
-			<div class="col-md-6 col-sm-6 col-xs-12">
-			  <div class="service-item">
-				<i class="tf-ion-ios-alarm-outline"></i>
-				<h4>Interactive Climate Education</h4>
-				<p>We design interactive programs that bring environmental issues to life, enabling youth to engage actively in climate solutions and sustainability practices.</p>
-			  </div>
-			</div><!-- END COL -->
-			<div class="col-md-6 col-sm-6 col-xs-12">
-			  <div class="service-item">
-				<i class="tf-ion-ios-briefcase-outline"></i>
-				<h4>Environmental Innovation Projects</h4>
-				<p>We encourage creativity through hands-on projects focused on environmental innovation, from renewable energy solutions to sustainable agriculture.</p>
-			  </div>
-			  
-			</div><!-- END COL -->
-			
-			<div class="col-md-6 col-sm-6 col-xs-12">
-			  <div class="service-item">
-				<i class="tf-ion-ios-email-outline"></i>
-				<h4>Collaboration for Change</h4>
-				<p>Our platform connects youth from all over the world, enabling them to collaborate on global climate action projects and share solutions to pressing environmental challenges.</p>
-			  </div>
-			</div><!-- END COL -->
-			<div class="col-md-6 col-sm-6 col-xs-12">
-			  <div class="service-item">
-				<i class="tf-ion-ios-locked-outline"></i>
-				<h4>Safe Learning Environment</h4>
-				<p>Our platform is built to protect your privacy and provide a safe space for learning, creation, and collaboration on climate initiatives.</p>
-			  </div>
-			</div><!-- END COL -->
-		  </div>
-		</div>
-	  </div> <!-- End row -->
-	</div> <!-- End container -->
-    </section> <!-- End section -->
-  
-<!--
-Start About Section
-==================================== -->
-
-<section class="about-2 section" id="about">
-	<div class="container">
-	  <div class="row">
-	
-		<!-- section title -->
-		<div class="col-12">
-		  <div class="title text-center">
-			<h2>We Are The Unlimited Youths</h2>
-			<p>At The Unlimited Youths, we are dedicated to empowering youth around the world to take action against climate change. Through innovative education, hands-on programs, and collaborative initiatives, we equip the next generation with the tools they need to build a sustainable future.</p>
-			<div class="border"></div>
-		  </div>
-		</div>
-		<!-- /section title -->
-	
-		<div class="col-md-6">
-		  <img src="images/WhatsApp Image 2025-03-31 at 17.55.22_38019cfb.jpg" class="img-fluid" alt="Youth Climate Action">
-		</div>
-		<div class="col-md-6">
-		  <ul class="checklist">
-			<li>We design interactive programs that engage youth in climate action and sustainability.</li>
-			<li>Our platform offers hands-on projects that empower youth to create real-world solutions for environmental challenges.</li>
-			<li>We provide collaborative spaces for youth to work together, share ideas, and lead initiatives for a sustainable future.</li>
-			<li>Our initiatives are accessible, inclusive, and tailored to inspire youth from diverse backgrounds to contribute to climate solutions.</li>
-			<li>We foster leadership, teamwork, and a sense of global community through impactful climate action projects.</li>
-		  </ul>
-		  <a href="about.html" class="btn btn-main mt-20">Learn More</a>
-		</div>
-	  </div> <!-- End row -->
-	</div> <!-- End container -->
-  </section> <!-- End section -->
-  
-  
-<!--
-Start Call To Action
-==================================== -->
-      <section class="call-to-action section">
-	<div class="container">
-	  <div class="row">
-		<div class="col-md-12 text-center">
-		  <h2>Join Us in the Fight Against Climate Change</h2>
-		  <p>At The Unlimited Youths, we believe in the power of youth to drive change. Together, we can create a sustainable future by taking action today. Whether you're ready to volunteer, donate, or collaborate, your involvement matters.</p>
-		  <a href="get-involved.html" class="btn btn-main">Get Involved</a>
-		</div>
-	  </div> <!-- End row -->
-	</div> <!-- End container -->
-     </section> <!-- End section -->
-  
-
-<!--
-		Start Counter Section
-		==================================== -->
-		<section class="counter-wrapper section-sm">
-			<div class="container">
-			 <div>
-				<h3>Frequently Asked Questions</h3>
-			 </div> <!-- end row -->
-			</div> <!-- end container -->
-		  </section> <!-- end section -->
-		  
-
-<!-- Start Testimonial
-=========================================== -->
-		
-     <section class="testimonial section" id="testimonial">
-	<div class="container">
-	  <div class="row">        
-		<div class="col-lg-12">
-		  <!-- testimonial wrapper -->
-		  <div class="testimonial-slider">
-			
-			<!-- testimonial single -->
-			<div class="item text-center">
-			  <i class="tf-ion-chatbubbles"></i>
-			  <!-- client info -->
-			  <div class="client-details">
-				<p>"The Unlimited Youths provided me with the resources and knowledge I needed to become an active participant in climate change solutions. Their platform is not just informative, but also empowering, giving us the tools to lead impactful initiatives."</p>
-			  </div>
-			  <!-- /client info -->
-			  <!-- client photo -->
-			  <div class="client-thumb">
-				<img src="images/client-logo/clients-1.jpg" class="img-fluid" alt="">
-			  </div>
-			  <div class="client-meta">
-				<h3>Jerome Oscar</h3>
-				<span>Environmental Advocate, Global Climate Action Network</span>
-			  </div>
-			  <!-- /client photo -->
-			</div>
-			<!-- /testimonial single -->
-			
-			<!-- testimonial single -->
-			<div class="item text-center">
-			  <i class="tf-ion-chatbubbles"></i>
-			  <!-- client info -->
-			  <div class="client-details">
-				<p>"As a young entrepreneur in the sustainability space, TUY has been a game-changer. Their guidance on creating eco-friendly businesses has helped me start my own company focused on green technology."</p>
-			  </div>
-			  <!-- /client info -->
-			  <!-- client photo -->
-			  <div class="client-thumb">
-				<img src="images/team/emma_ogwal.jpg" class="img-fluid" alt="">
-			  </div>
-			  <div class="client-meta">
-				<h3>Emma Ogwal</h3>
-				<span>Founder & CEO, Eco Innovations</span>
-			  </div>
-			  <!-- /client photo -->
-			</div>
-			<!-- /testimonial single -->
-			
-			<!-- testimonial single -->
-			<div class="item text-center">
-			  <i class="tf-ion-chatbubbles"></i>
-			  <!-- client info -->
-			  <div class="client-details">
-				<p>"The mentorship I received through TUY’s programs gave me the confidence to start my own climate action project. The community of like-minded individuals has been incredibly supportive, and the resources provided are top-notch."</p>
-			  </div>
-			  <!-- /client info -->
-			  <!-- client photo -->
-			  <div class="client-thumb">
-				<img src="images/sedu.jpeg.jpg" class="img-fluid" alt="">
-			  </div>
-			  <div class="client-meta">
-				<h3>Sedrick Otolo</h3>
-				<span>Founder, Youth for Green Future</span>
-			  </div>
-			  <!-- /client photo -->
-			</div>
-			<!-- /testimonial single -->
-  
-		  </div>
-		</div> <!-- end col lg 12 -->
-	  </div>    <!-- End row -->
-	</div>       <!-- End container -->
-     </section>    <!-- End Section -->
-  
-
-<!--
-		Start Blog Section
-		=========================================== -->
-		<section class="blog" id="blog">
-			<div class="container">
-				<div class="row">
-		
-					<!-- Section Title -->
-					<div class="col-12">
-						<div class="title text-center">
-							<h2>Our Latest <span class="color">Insights</span></h2>
-							<div class="border"></div>
-							<p>Stay ahead with our expert articles, creative insights, and the latest trends. From thought-provoking ideas to practical tips, explore how we blend technology, creativity, and innovation in the world of digital learning and design.</p>
-						</div>
-					</div>
-					<!-- /Section Title -->
-		
-					<!-- Single Blog Post -->
-					<article class="col-md-4 col-sm-6 col-xs-12 clearfix">
-						<div class="post-item">
-							<div class="media-wrapper">
-								<img src="images/blog/blog_post_1.jpg" alt="Exploring the Power of Creativity in Learning" class="img-fluid">
-							</div>
-		
-							<div class="content">
-								<h3><a href="single-post.html">Unleashing Creativity in Digital Learning</a></h3>
-								<p>Discover how creativity can transform learning experiences. In this post, we explore the importance of interactive environments that encourage learners to think outside the box and create their own path.</p>
-								<a class="btn btn-main" href="single-post.html">Read More</a>
-							</div>
-						</div>
-					</article>
-					<!-- /Single Blog Post -->
-		
-					<!-- Single Blog Post -->
-					<article class="col-md-4 col-sm-6 col-xs-12">
-						<div class="post-item">
-							<div class="media-wrapper">
-								<img src="images/blog/blog_post_2.jpg" alt="How Collaboration Drives Innovation" class="img-fluid">
-							</div>
-		
-							<div class="content">
-								<h3><a href="single-post.html">The Power of Collaboration in Digital Spaces</a></h3>
-								<p>Explore the power of teamwork in creative and educational projects. This article highlights the benefits of collaborative tools and how they foster innovation and problem-solving in a connected world.</p>
-								<a class="btn btn-main" href="single-post.html">Read More</a>
-							</div>
-						</div>
-					</article>
-					<!-- /Single Blog Post -->
-		
-					<!-- Single Blog Post -->
-					<article class="col-md-4 col-sm-6 col-xs-12">
-						<div class="post-item">
-							<div class="media-wrapper">
-								<img src="images/blog/blog_post_3.jpg" alt="Design Thinking for Digital Experiences" class="img-fluid">
-							</div>
-		
-							<div class="content">
-								<h3><a href="single-post.html">Design Thinking: A Guide to Innovation</a></h3>
-								<p>Design thinking is more than a process—it's a mindset. In this post, we dive deep into how design thinking drives innovation in the development of digital products and experiences, making them more user-centered and impactful.</p>
-								<a class="btn btn-main" href="single-post.html">Read More</a>
-							</div>
-						</div>
-					</article>
-					<!-- /Single Blog Post -->
-				</div> <!-- End row -->
-			</div> <!-- End container -->
-		</section> <!-- End section -->
-
-		
-		<footer id="footer" class="bg-one">
-			<div class="top-footer">
-			  <div class="container">
-				<div class="row">
-				  <div class="col-sm-3 col-md-3 col-lg-3">
-					<h3>About Us</h3>
-					<p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
-				  </div>
-				  <!-- End of .col-sm-3 -->
-		  
-				  <div class="col-sm-3 col-md-3 col-lg-3">
-					<ul>
-					  <li><h3>Our Services</h3></li>
-					  <li><a href="#">Interactive Learning</a></li>
-					  <li><a href="#">Creative Projects</a></li>
-					  <li><a href="#">Collaborative Tools</a></li>
-					  <li><a href="#">Secure Platform</a></li>
-					</ul>
-				  </div>
-				  <!-- End of .col-sm-3 -->
-		  
-				  <div class="col-sm-3 col-md-3 col-lg-3">
-					<ul>
-					  <li><h3>Quick Links</h3></li>
-					  <li><a href="index.html#partners">Partners</a></li>
-					  <li><a href="about.html">About Us</a></li>
-					  <li><a href="get-involved.html">Volunteer</a></li>
-					  <li><a href="index.html#faq">FAQ’s</a></li>
-					  <li><a href="contact.html">Contact Us</a></li>
-					</ul>
-				  </div>
-				  <!-- End of .col-sm-3 -->
-		  
-				  <div class="col-sm-3 col-md-3 col-lg-3">
-					<ul>
-						<li><h3>Connect with Us</h3></li>
-						<li><a href="https://wa.me/256777366181" target="_blank"><i class="tf-ion-social-whatsapp"></i></a></li>
-						<li><a href="https://x.com/tuy_ug" target="_blank"><i class="tf-ion-social-twitter"></i></a></li>
-						<li><a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank"><i class="tf-ion-social-facebook"></i></a></li>
-						<li><a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank"><i class="tf-ion-social-youtube"></i></a></li>
-						<li><a href="https://www.instagram.com/theunlimitedyouths?igsh=dHgxcWxnaThsdXRx" target="_blank"><i class="tf-ion-social-instagram"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>
-					</ul>
-				  </div>
-				  <!-- End of .col-sm-3 -->
-		  
-				</div>
-			  </div> <!-- end container -->
-			</div>
-			<div class="footer-bottom">
-			  <h5>Copyright 2025. All rights reserved.</h5>
-			  <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
-			  <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
-			</div>
-		  </footer> <!-- end footer -->
-		  
-
-    
-
-    
-    <!-- 
-    Essential Scripts
-    =====================================-->
-    <!-- Main jQuery -->
+    <header class="navigation fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand logo active" href="index.html">
+                    <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Activities.html">Our Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="partners.html">Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="hero-slider">
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider_bg_1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Join the Reforestation Brigades!</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Empowering Youth to Fight Climate Change and Shape a Sustainable Future</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="get-involved.html">Join the Movement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider_bg_3.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Power the Future with Green Skills!</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Empowering Youth to Fight Climate Change and Shape a Sustainable Future</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main" href="get-involved.html">Join the Movement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider_bg_2.png);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Innovate with IT Skills!</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Empowering Youth to Fight Climate Change and Shape a Sustainable Future</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main" href="get-involved.html">Join the Movement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="impact-stats section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6 text-center" style="margin-bottom: 10px;">
+                    <div class="counters-item" style="background-color: #1976D2; border-radius: 8px;">
+                        <i class="tf-ion-ios-people-outline" style="color: white;"></i>
+                        <div>
+                            <span class="counter" data-count="1" style="color: white;">0</span><span style="color: white;"> billion</span>
+                        </div>
+                        <h3 style="color: white;">Children at risk due to climate change</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 text-center" style="margin-bottom: 10px;">
+                    <div class="counters-item" style="background-color: #1976D2; border-radius: 8px;">
+                        <i class="tf-ion-ios-person-outline" style="color: white;"></i>
+                        <div>
+                            <span class="counter" data-count="500" style="color: white;">0</span>
+                        </div>
+                        <h3 style="color: white;">Youths Empowered by TUY</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 text-center" style="margin-bottom: 10px;">
+                    <div class="counters-item" style="background-color: #1976D2; border-radius: 8px;">
+                        <i class="tf-ion-ios-cloud-outline" style="color: white;"></i>
+                        <div>
+                            <span class="counter" data-count="41.5" style="color: white;">0</span> <span style="color: white;"> billion tons</span>
+                        </div>
+                        <h3 style="color: white;">CO2 emissions today</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service-2 section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>What We Offer</h2>
+                        <p>We offer a range of impactful programs and tools designed to empower youth in their journey to combat climate change. Explore how we bring creativity, collaboration, and innovation to the forefront of environmental education.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/climate2.jpg" class="inline-block mb-3" alt="Youth Collaboration Image" style="width: 375px; height: auto;">
+                    <img src="images/DSC_3414.JPG" class="inline-block" alt="Collaboration Visual" style="width: 375px; height: auto; margin-top: 110px;">
+                </div>
+                <div class="col-md-8">
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-alarm-outline"></i>
+                                <h4>Interactive Climate Education</h4>
+                                <p>We design interactive programs that bring environmental issues to life, enabling youth to engage actively in climate solutions and sustainability practices.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-briefcase-outline"></i>
+                                <h4>Environmental Innovation Projects</h4>
+                                <p>We encourage creativity through hands-on projects focused on environmental innovation, from renewable energy solutions to sustainable agriculture.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-email-outline"></i>
+                                <h4>Collaboration for Change</h4>
+                                <p>Our platform connects youth from all over the world, enabling them to collaborate on global climate action projects and share solutions to pressing environmental challenges.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-locked-outline"></i>
+                                <h4>Safe Learning Environment</h4>
+                                <p>Our platform is built to protect your privacy and provide a safe space for learning, creation, and collaboration on climate initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-2 section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>We Are The Unlimited Youths</h2>
+                        <p>At The Unlimited Youths, we are dedicated to empowering youth around the world to take action against climate change. Through innovative education, hands-on programs, and collaborative initiatives, we equip the next generation with the tools they need to build a sustainable future.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/WhatsApp Image 2025-03-31 at 17.55.22_38019cfb.jpg" class="img-fluid" alt="Youth Climate Action">
+                </div>
+                <div class="col-md-6" style="padding: 20px 50px;">
+                    <ul class="checklist">
+                        <li>We design interactive programs that engage youth in climate action and sustainability.</li>
+                        <li>Our platform offers hands-on projects that empower youth to create real-world solutions for environmental challenges.</li>
+                        <li>We provide collaborative spaces for youth to work together, share ideas, and lead initiatives for a sustainable future.</li>
+                        <li>Our initiatives are accessible, inclusive, and tailored to inspire youth from diverse backgrounds to contribute to climate solutions.</li>
+                        <li>We foster leadership, teamwork, and a sense of global community through impactful climate action projects.</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-main mt-20">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-initiative section-sm bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="featured-box" style="padding: 40px; border-radius: 5px;">
+                        <h2>Green Skills Bootcamp</h2>
+                        <p>Training youth in solar installation and sustainable farming.</p>
+                        <a href="Activities.html" class="btn btn-main mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq section-sm" id="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>Frequently Asked <span class="color">Questions</span></h2>
+                        <p>Find answers to common questions about The Unlimited Youths, our programs, and how you can get involved in our mission to empower youth for a sustainable future.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    How can I join a program?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Visit Our Programs page, pick your interest, and click ‘Join Now’ to sign up via Get Involved.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    Where do you operate?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We’re active globally, with projects in Lagos, Mumbai, and more. See our Impact Map on About Us.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    How is my donation used?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Every dollar funds training, trees, or startups. Check progress on Our Programs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    Can I volunteer remotely?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Options include online coding mentorship or advocacy campaigns. See Get Involved.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                    How do you protect my data?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We use SSL encryption and comply with privacy laws. Read our Privacy Policy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p>Still curious? We’re here to help.</p>
+                        <a href="contact.html" class="btn btn-main">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial section" id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-slider">
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <div class="client-details">
+                                <p>"The Unlimited Youths provided me with the resources and knowledge I needed to become an active participant in climate change solutions. Their platform is not just informative, but also empowering, giving us the tools to lead impactful initiatives."</p>
+                            </div>
+                            <div class="client-thumb">
+                                <img src="images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Jerome Oscar</h3>
+                                <span>Environmental Advocate, Global Climate Action Network</span>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <div class="client-details">
+                                <p>"As a young entrepreneur in the sustainability space, TUY has been a game-changer. Their guidance on creating eco-friendly businesses has helped me start my own company focused on green technology."</p>
+                            </div>
+                            <div class="client-thumb">
+                                <img src="images/team/emma_ogwal.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Emma Ogwal</h3>
+                                <span>Founder & CEO, Eco Innovations</span>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <div class="client-details">
+                                <p>"The mentorship I received through TUY’s programs gave me the confidence to start my own climate action project. The community of like-minded individuals has been incredibly supportive, and the resources provided are top-notch."</p>
+                            </div>
+                            <div class="client-thumb">
+                                <img src="images/sedu.jpeg.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Sedrick Otolo</h3>
+                                <span>Founder, Youth for Green Future</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners section" id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>Collaborating for <span class="color">Impact</span></h2>
+                        <p>We work with inspiring organizations to amplify our mission. Together, we empower youth and tackle climate challenges.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="partner-carousel">
+                        <div class="partner-item">
+                            <i class="bi bi-sun" style="color: #2E7D32;"></i>
+                            <h4>SolarWorks Inc.</h4>
+                            <p>Provides solar training kits for Green Skills programs.</p>
+                            <a href="https://www.solarworks.com" target="_blank" style="color: #2E7D32;">Visit SolarWorks</a>
+                        </div>
+                        <div class="partner-item">
+                            <i class="bi bi-tree" style="color: #2E7D32;"></i>
+                            <h4>GreenFuture NGO</h4>
+                            <p>Supports Reforestation Brigades with seedlings and expertise.</p>
+                            <a href="https://www.greenfuture.org" target="_blank" style="color: #2E7D32;">Visit GreenFuture</a>
+                        </div>
+                        <div class="partner-item">
+                            <i class="bi bi-laptop" style="color: #2E7D32;"></i>
+                            <h4>TechForGood</h4>
+                            <p>Funds IT Innovation bootcamps and coding resources.</p>
+                            <a href="https://www.techforgood.org" target="_blank" style="color: #2E7D32;">Visit TechForGood</a>
+                        </div>
+                        <div class="partner-item">
+                            <i class="bi bi-lightning-charge" style="color: #2E7D32;"></i>
+                            <h4>Youth Empowerment Fund</h4>
+                            <p>Backs Entrepreneurship and Leadership training.</p>
+                            <a href="https://www.youthempowermentfund.org" target="_blank" style="color: #2E7D32;">Visit YEF</a>
+                        </div>
+                    </div>
+                    <div class="become-partner">
+                        <p>Interested in partnering with TUY? Let’s make a difference together.</p>
+                        <a href="contact.html" class="btn btn-main">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="call-to-action section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Join Us in the Fight Against Climate Change</h2>
+                    <p>At The Unlimited Youths, we believe in the power of youth to drive change. Together, we can create a sustainable future by taking action today. Whether you're ready to volunteer, donate, or collaborate, your involvement matters.</p>
+                    <div class="cta-buttons mt-4">
+                        <a href="get-involved.html" class="btn btn-main mx-2">Donate</a>
+                        <a href="get-involved.html" class="btn btn-main mx-2">Volunteer</a>
+                        <a href="contact.html" class="btn btn-main mx-2">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="bg-one">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <h3>About Us</h3>
+            <p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Our Services</h3></li>
+              <li><a href="#">Interactive Learning</a></li>
+              <li><a href="#">Creative Projects</a></li>
+              <li><a href="#">Collaborative Tools</a></li>
+              <li><a href="#">Secure Platform</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Quick Links</h3></li>
+              <li><a href="index.html#partners">Partners</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="get-involved.html">Volunteer</a></li>
+              <li><a href="index.html#faq">FAQ’s</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="social-links">
+				<h3>Quick Links</h3>
+                        <a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/tuy_ug" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/theunlimitedyouths" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+						<a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h5>Copyright 2025. All rights reserved.</h5>
+      <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
+      <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
+    </div>
+  </footer>
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies Consent</h2>
+        </header>
+        <div class="data">
+            <p>We use cookies to enhance your experience. By continuing, you agree to our Cookie Policy.</p>
+        </div>
+        <div class="buttons">
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="learnMoreBtn">Learn More</button>
+        </div>
+    </div>
     <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-    <script  src="plugins/google-map/gmap.js"></script>
-
-    <!-- Form Validation -->
-    <script src="plugins/form-validation/jquery.form.js"></script> 
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="plugins/form-validation/jquery.form.js"></script>
     <script src="plugins/form-validation/jquery.validate.min.js"></script>
-    
-    <!-- Bootstrap4 -->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Parallax -->
     <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
-    <!-- lightbox -->
     <script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
-    <!-- Owl Carousel -->
     <script src="plugins/slick/slick.min.js"></script>
-    <!-- filter -->
     <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
-    <!-- Smooth Scroll js -->
     <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-    
-    <!-- Custom js -->
     <script src="js/script.js"></script>
+    <script>
+        // Ensure accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = document.querySelector(this.getAttribute('data-bs-target'));
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    accordionButtons.forEach(btn => {
+                        const otherTarget = document.querySelector(btn.getAttribute('data-bs-target'));
+                        if (otherTarget !== target && otherTarget.classList.contains('show')) {
+                            otherTarget.classList.remove('show');
+                            btn.setAttribute('aria-expanded', 'false');
+                            btn.classList.add('collapsed');
+                        }
+                    });
+                    if (!isExpanded) {
+                        target.classList.add('show');
+                        this.setAttribute('aria-expanded', 'true');
+                        this.classList.remove('collapsed');
+                    } else {
+                        target.classList.remove('show');
+                        this.setAttribute('aria-expanded', 'false');
+                        this.classList.add('collapsed');
+                    }
+                });
+            });
 
-  </body>
-  </html>
+            // Initialize Slick carousel for partners
+            $('.partner-carousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
