@@ -2,41 +2,41 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html> <!--<![endif]-->
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+
   <!-- Meta description optimized for SEO -->
   <meta name="description" content="Unlimited Youth is a creative platform for young individuals, offering interactive learning and community engagement through innovative web-based experiences.">
-  
+
   <!-- Meta keywords for better SEO -->
   <meta name="keywords" content="Unlimited Youth, interactive learning, youth platform, community engagement, educational web app, innovative youth activities, web development, creative projects">
-  
+
   <meta name="author" content="Kakebe.com">
-  
+
   <!-- Title optimized for SEO -->
   <title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
-  
+
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Open Graph Meta Tags for social sharing -->
   <meta property="og:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
   <meta property="og:description" content="Unlimited Youth is a platform that provides young people with the tools and community to engage in interactive learning, creativity, and personal growth.">
   <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:url" content="https://www.unlimitedyouth.com">
   <meta property="og:type" content="website">
-  
+
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
   <meta name="twitter:description" content="Unlimited Youth is a platform that provides young people with interactive learning, community engagement, and creative opportunities.">
   <meta name="twitter:image" content="images/twitter-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  
+
   <!-- Favicon for branding -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  
+  <link rel="shortcut icon" type="image/x-icon" href="images/TUY_Logo.png">
+
   <!-- CSS Files -->
   <link rel="stylesheet" href="plugins/themefisher-font/style.css"> <!-- Font Icon -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"> <!-- Bootstrap -->
@@ -44,7 +44,11 @@
   <link rel="stylesheet" href="plugins/animate/animate.css"> <!-- Animation styles -->
   <link rel="stylesheet" href="plugins/slick/slick.css"> <!-- Slick carousel styles -->
   <link rel="stylesheet" href="css/style.css"> <!-- Main styles for the website -->
-  
+
+  <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <!-- Structured Data (JSON-LD) for enhanced SEO -->
   <script type="application/ld+json">
     {
@@ -63,21 +67,40 @@
   </script>
 
   <style>
+	a {
+            text-decoration: none;
+        }
     .col-sm-3 ul li a i {
       font-size: 24px;
       color: #555;
       margin-right: 10px;
       transition: color 0.3s ease;
   }
-  
+
   .col-sm-3 ul li a i:hover {
       color: #007bff;
   }
+  /* Simple Footer */
+        .social-links a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
     </style>
-  
+
 
   </head>
-  
+
 
 <body id="body">
 
@@ -93,13 +116,13 @@
       <span></span>
       <span></span>
     </div>
-  </div> 
+  </div>
   <!--
   End Preloader
   ==================================== -->
 
 
-  
+
 
 <!--
 Fixed Navigation
@@ -110,9 +133,7 @@ Fixed Navigation
     <nav class="navbar navbar-expand-lg navbar-light">
       <!-- logo -->
       <a class="navbar-brand logo" href="index.html">
-        <h5 style="color: #007bff;">
-          The Unlimited Youth.
-        </h5>
+        <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
       </a>
       <!-- /logo -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -122,40 +143,40 @@ Fixed Navigation
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-        <!-- Home -->
-        <li class="nav-item ">
-          <a class="nav-link" href="index.html">Home</a> 
-        </li>
-        <!-- About Us -->
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-        <!-- Our Programs -->
-        <li class="nav-item">
-          <a class="nav-link" href="Activities.html">Activities</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="team.html">Team</a>
-        </li>
-      
-        <!-- Blog -->
-        <li class="nav-item active">
-          <a class="nav-link" href="blog.html">Blog</a>
-        </li>
-        <!-- Donate -->
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Projects</a>
-        </li>
-        <!-- Contact -->
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-  
-        <li class=" nav-item">
-          <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-        </li>
-        </ul>
+			<!-- Home -->
+			<li class="nav-item">
+			  <a class="nav-link" href="index.html">Home</a>
+			</li>
+			<!-- About Us -->
+			<li class="nav-item ">
+			  <a class="nav-link" href="about.html">About Us</a>
+			</li>
+			<!-- Our Programs -->
+			<li class="nav-item">
+			  <a class="nav-link" href="Activities.html">Our Programs</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="team.html">Team</a>
+			</li>
+
+			<!-- Blog -->
+			<li class="nav-item active">
+			  <a class="nav-link" href="blog.html">Blog/News</a>
+			</li>
+			<!-- Donate -->
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="portfolio.html">Projects</a>
+			</li> -->
+			<!-- Contact -->
+			<li class="nav-item">
+			  <a class="nav-link" href="contact.html">Contact Us</a>
+			</li>
+
+			<li class=" nav-item">
+				<a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+			</li>
+		  </ul>
       </div>
     </nav>
     <!-- /main nav -->
@@ -282,69 +303,70 @@ End Fixed Navigation
 </div>
 </section>
 
-      
-	<footer id="footer" class="bg-one">
-		<div class="top-footer">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<h3>About Us</h3>
-				<p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-				  <li><h3>Our Services</h3></li>
-				  <li><a href="#">Interactive Learning</a></li>
-				  <li><a href="#">Creative Projects</a></li>
-				  <li><a href="#">Collaborative Tools</a></li>
-				  <li><a href="#">Secure Platform</a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-				  <li><h3>Quick Links</h3></li>
-				  <li><a href="#">Partners</a></li>
-				  <li><a href="#">About Us</a></li>
-				  <li><a href="#">FAQ’s</a></li>
-				  <li><a href="#">Contact Us</a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-					<li><h3>Connect with Us</h3></li>
-					<li><a href="https://wa.me/256777366181" target="_blank">WhatsApp</a></li>
-					<li><a href="https://x.com/tuy_ug" target="_blank">X</a></li>
-					<li><a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank">Facebook</a></li>
 
-					<li><a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank">YouTube</a></li>
-					<li><a href="https://www.instagram.com/theunlimitedyouths?igsh=dHgxcWxnaThsdXRx" target="_blank">Instagram</a></li>
-					<li><a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			</div>
-		  </div> <!-- end container -->
-		</div>
-		<div class="footer-bottom">
-		  <h5>Copyright 2025. All rights reserved.</h5>
-		  <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
-		  <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
-		</div>
-	  </footer> <!-- end footer -->
+	<footer id="footer" class="bg-one">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <h3>About Us</h3>
+            <p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Our Services</h3></li>
+              <li><a href="#">Interactive Learning</a></li>
+              <li><a href="#">Creative Projects</a></li>
+              <li><a href="#">Collaborative Tools</a></li>
+              <li><a href="#">Secure Platform</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Quick Links</h3></li>
+              <li><a href="index.html#partners">Partners</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="get-involved.html">Volunteer</a></li>
+              <li><a href="index.html#faq">FAQ’s</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="social-links">
+				<h3>Quick Links</h3>
+                        <a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/tuy_ug" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/theunlimitedyouths" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+						<a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h5>Copyright 2025. All rights reserved.</h5>
+      <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
+      <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
+    </div>
+  </footer> <!-- end footer -->
 
     <!-- end Footer Area
     ========================================== -->
 
 
-    
-    <!-- 
+
+    <!--
     Essential Scripts
     =====================================-->
     <!-- Main jQuery -->
@@ -354,9 +376,9 @@ End Fixed Navigation
     <script  src="plugins/google-map/gmap.js"></script>
 
     <!-- Form Validation -->
-    <script src="plugins/form-validation/jquery.form.js"></script> 
+    <script src="plugins/form-validation/jquery.form.js"></script>
     <script src="plugins/form-validation/jquery.validate.min.js"></script>
-    
+
     <!-- Bootstrap4 -->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Parallax -->
@@ -369,7 +391,7 @@ End Fixed Navigation
     <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
     <!-- Smooth Scroll js -->
     <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-    
+
     <!-- Custom js -->
     <script src="js/script.js"></script>
 

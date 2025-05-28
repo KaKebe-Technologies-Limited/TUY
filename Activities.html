@@ -2,41 +2,41 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html> <!--<![endif]-->
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
+
 	<!-- Meta description optimized for SEO -->
 	<meta name="description" content="Unlimited Youth is a creative platform for young individuals, offering interactive learning and community engagement through innovative web-based experiences.">
-  
+
 	<!-- Meta keywords for better SEO -->
 	<meta name="keywords" content="Unlimited Youth, interactive learning, youth platform, community engagement, educational web app, innovative youth activities, web development, creative projects">
-  
+
 	<meta name="author" content="Kakebe.com">
-  
+
 	<!-- Title optimized for SEO -->
 	<title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
-  
+
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
 	<!-- Open Graph Meta Tags for social sharing -->
 	<meta property="og:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
 	<meta property="og:description" content="Unlimited Youth is a platform that provides young people with the tools and community to engage in interactive learning, creativity, and personal growth.">
 	<meta property="og:image" content="images/og-image.jpg">
 	<meta property="og:url" content="https://www.unlimitedyouth.com">
 	<meta property="og:type" content="website">
-  
+
 	<!-- Twitter Card Meta Tags -->
 	<meta name="twitter:title" content="Unlimited Youth - Interactive Learning and Creative Community for Youth">
 	<meta name="twitter:description" content="Unlimited Youth is a platform that provides young people with interactive learning, community engagement, and creative opportunities.">
 	<meta name="twitter:image" content="images/twitter-image.jpg">
 	<meta name="twitter:card" content="summary_large_image">
-  
+
 	<!-- Favicon for branding -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  
+	<link rel="shortcut icon" type="image/x-icon" href="images/TUY_Logo.png">
+
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="plugins/themefisher-font/style.css"> <!-- Font Icon -->
 	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"> <!-- Bootstrap -->
@@ -44,7 +44,12 @@
 	<link rel="stylesheet" href="plugins/animate/animate.css"> <!-- Animation styles -->
 	<link rel="stylesheet" href="plugins/slick/slick.css"> <!-- Slick carousel styles -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Main styles for the website -->
-  
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 	<!-- Structured Data (JSON-LD) for enhanced SEO -->
 	<script type="application/ld+json">
 	  {
@@ -63,19 +68,354 @@
 	</script>
 
 	<style>
+		:root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+		a {
+			text-decoration: none;
+		}
 		.col-sm-3 ul li a i {
 		font-size: 24px;
 		color: #555;
 		margin-right: 10px;
 		transition: color 0.3s ease;
 	}
-	
+
 	.col-sm-3 ul li a i:hover {
 		color: #007bff;
 	}
+
+	.hero-section {
+            background: linear-gradient(rgba(20, 46, 2, 0.8), rgba(12, 99, 1, 0.8)), 
+                        url('images/header.png') center/cover;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Article Section */
+        .article-section {
+            padding: 80px 0;
+            background: var(--light-color);
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Program Cards with Carousels */
+        .program-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+
+        .program-header {
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .poverty-icon { background: var(--danger-color); }
+        .innovation-icon { background: var(--primary-color); }
+        .climate-icon { background: var(--success-color); }
+
+        .program-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .program-description {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .program-content {
+            display: flex;
+            min-height: 400px;
+        }
+
+        .program-details {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .program-carousel {
+            flex: 0 0 400px;
+            background: #f8f9fa;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .program-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .program-item h5 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .program-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #333;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2E7D32;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background: white;
+        }
+
+        .cta-card {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            color: var(--primary-color);
+        }
+
+        /* Simple Footer */
+        .social-links a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+
+    
+
+		.footer-social li a {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		/* Enhanced Progress Block Styles */
+.progress-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.progress-block li {
+    position: relative;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+.progress-block li .progress {
+    width: 100%;
+	height: 40px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    transition: width 0.6s ease;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.progress-block span {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-weight: 600;
+    z-index: 10;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+/* Add percentage display */
+.progress-block li::after {
+    content: attr(data-percentage);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-weight: 600;
+    z-index: 10;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Hover effects */
+.progress-block li:hover .progress-bar {
+    transform: scaleY(1.05);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+}
+
+.progress-block li:hover span {
+    transform: translateY(-50%) scale(1.05);
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .program-content {
+                flex-direction: column;
+            }
+            
+            .program-carousel {
+                flex: none;
+            }
+            
+            .carousel-item img {
+                height: 250px;
+            }
+        }
 	  </style>
   </head>
-  
+
 <body id="body">
 
  <!--
@@ -90,13 +430,13 @@
       <span></span>
       <span></span>
     </div>
-  </div> 
+  </div>
   <!--
   End Preloader
   ==================================== -->
 
 
-  
+
 
 <!--
 Fixed Navigation
@@ -108,7 +448,7 @@ Fixed Navigation
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<!-- logo -->
 			<a class="navbar-brand logo" href="index.html">
-				<h5 style="color: #007bff;">The Unlimited Youth</h5>
+				<img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
 			</a>
 			<!-- /logo -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -118,40 +458,40 @@ Fixed Navigation
 
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="navbar-nav ml-auto text-center">
-				  <!-- Home -->
-				  <li class="nav-item">
-					<a class="nav-link" href="index.html">Home</a> 
-				  </li>
-				  <!-- About Us -->
-				  <li class="nav-item">
-					<a class="nav-link" href="about.html">About Us</a>
-				  </li>
-				  <!-- Our Programs -->
-				  <li class="nav-item active">
-					<a class="nav-link" href="Activities.html">Activities</a>
-				  </li>
-				  
-				  <li class="nav-item">
-					  <a class="nav-link" href="team.html">Team</a>
-				  </li>
-			  
-				  <!-- Blog -->
-				  <li class="nav-item">
-					<a class="nav-link" href="blog.html">Blog</a>
-				  </li>
-				  <!-- Donate -->
-				  <li class="nav-item">
-					<a class="nav-link" href="portfolio.html">Projects</a>
-				  </li>
-				  <!-- Contact -->
-				  <li class="nav-item">
-					<a class="nav-link" href="contact.html">Contact</a>
-				  </li>
-	  
-				  <li class=" nav-item">
-					  <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-				  </li>
-				</ul>
+			<!-- Home -->
+			<li class="nav-item">
+			  <a class="nav-link" href="index.html">Home</a>
+			</li>
+			<!-- About Us -->
+			<li class="nav-item">
+			  <a class="nav-link" href="about.html">About Us</a>
+			</li>
+			<!-- Our Programs -->
+			<li class="nav-item active">
+			  <a class="nav-link" href="Activities.html">Our Programs</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="team.html">Team</a>
+			</li>
+
+			<!-- Blog -->
+			<li class="nav-item">
+			  <a class="nav-link" href="blog.html">Blog/News</a>
+			</li>
+			<!-- Donate -->
+			<!-- <li class="nav-item">
+			  <a class="nav-link" href="portfolio.html">Projects</a>
+			</li> -->
+			<!-- Contact -->
+			<li class="nav-item">
+			  <a class="nav-link" href="contact.html">Contact Us</a>
+			</li>
+
+			<li class=" nav-item">
+				<a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+			</li>
+			</ul>
 			  </div>
 		</nav>
 		<!-- /main nav -->
@@ -159,382 +499,355 @@ Fixed Navigation
 </header>
 <!-- End Fixed Navigation -->
 
-<!-- Start Single Page Header -->
-<section class="single-page-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>Our Activities</h2>
-				<ol class="breadcrumb header-bradcrumb">
-					<!-- <li><a href="index.html">Home</a></li>
-					<li class="active">Our Activities</li> -->
-				</ol>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Single Page Header -->
+<!-- Minimal Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Our Programs</h1>
+            <p class="hero-subtitle">
+                Transforming Uganda through strategic programs aligned with UN Sustainable Development Goals
+            </p>
+        </div>
+    </section>
 
-<!-- Start Activities Section -->
-<section class="activities" id="activities">
-	<div class="container">
-		<div class="row no-gutters">
-			<!-- Section Title -->
-			<div class="col-12">
-				<div class="title text-center">
-					<h2>Our Activities</h2>
-					<p>We at The Unlimited Youth (TUY) strive to inspire creativity, leadership, and community development through various interactive and engaging activities. Our approach combines hands-on experiences with collaborative efforts that empower the youth.</p>
-					<div class="border"></div>
+    <!-- Article Section with Carousels -->
+    <section class="article-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Strategic Programs</h2>
+                <p class="section-subtitle">
+                    Through evidence-based interventions and community partnerships, we're building a sustainable future for Uganda's youth and communities.
+                </p>
+            </div>
+
+            <!-- Poverty Reduction Program -->
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon poverty-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="program-title">Poverty Reduction</h3>
+                    <p class="program-description">
+                        Empowering Uganda's youth with practical skills and financial knowledge to break the cycle of poverty and build sustainable livelihoods.
+                    </p>
+                </div>
+                
+                <div class="program-content">
+                    <div class="program-details">
+                        <ul class="program-list">
+                            <li class="program-item">
+                                <h5><i class="fas fa-graduation-cap me-2"></i>Youth Life Skills Training</h5>
+                                <p>Comprehensive vocational training programs in tailoring, mechanics, agro-economy, and emerging trades.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-chart-line me-2"></i>Financial Literacy Workshops</h5>
+                                <p>Essential financial education covering savings strategies, investment principles, and budgeting techniques.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-user-tie me-2"></i>Mentorship Programs</h5>
+                                <p>One-on-one and group mentorship focusing on leadership development and entrepreneurship guidance.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-carousel">
+                        <div id="povertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/skill.jpg" alt="Skills Training">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/skill1.png" alt="Financial Literacy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/skill2.png" alt="Mentorship">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#povertyCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#povertyCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation Program -->
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon innovation-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="program-title">Innovation & Technology</h3>
+                    <p class="program-description">
+                        Bridging the digital divide by equipping Uganda's youth with cutting-edge technology skills and fostering an innovation mindset.
+                    </p>
+                </div>
+                
+                <div class="program-content">
+                    <div class="program-details">
+                        <ul class="program-list">
+                            <li class="program-item">
+                                <h5><i class="fas fa-laptop-code me-2"></i>ICT Training Programs</h5>
+                                <p>Comprehensive digital literacy programs covering essential computer skills and emerging technology applications.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-code me-2"></i>Tech Camps & Hackathons</h5>
+                                <p>Interactive platforms where youth collaborate to design innovative, tech-driven solutions to real-world problems.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-search me-2"></i>Research Initiatives</h5>
+                                <p>Evidence-based research projects that tackle modern challenges facing Uganda's communities.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-carousel">
+                        <div id="innovationCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/tech.png" alt="ICT Training">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/tech1.png" alt="Tech Camps">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/tech2.png" alt="Research">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#innovationCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#innovationCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climate Action Program -->
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon climate-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="program-title">Climate Action</h3>
+                    <p class="program-description">
+                        Leading the fight against climate change through direct environmental action, community engagement, and sustainable livelihood creation.
+                    </p>
+                </div>
+                
+                <div class="program-content">
+                    <div class="program-details">
+                        <ul class="program-list">
+                            <li class="program-item">
+                                <h5><i class="fas fa-tree me-2"></i>Tree Planting Initiatives</h5>
+                                <p>Ambitious reforestation program targeting 10,000+ trees planted annually in partnership with local communities.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-bullhorn me-2"></i>Climate Advocacy Campaigns</h5>
+                                <p>Multi-channel awareness campaigns including radio shows, social media drives, and community seminars.</p>
+                            </li>
+                            <li class="program-item">
+                                <h5><i class="fas fa-briefcase me-2"></i>Green Jobs Promotion</h5>
+                                <p>Strategic collaborations to create eco-friendly employment opportunities that make sustainability profitable.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="program-carousel">
+                        <div id="climateCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/green.jpg" alt="Tree Planting">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/green3.jpg" alt="Climate Advocacy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/green2.jpg" alt="Green Jobs">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#climateCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#climateCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-count="500">0</span>
+                        <div class="stat-label">Youth Empowered</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-count="10000">0</span>
+                        <div class="stat-label">Trees Planted</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-count="120">0</span>
+                        <div class="stat-label">Training Sessions</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-count="300">0</span>
+                        <div class="stat-label">Community Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+	<!-- Start Team Skills =========================================== -->
+
+	<section class="team-skills section-sm" id="skills">
+		<div class="container">
+			<div class="row">
+
+				<!-- section title -->
+				<div class="col-12">
+					<div class="title text-center">
+						<h2>Our Skills</h2>
+						<p>At TUY, we focus on equipping the youth with a wide range of skills, from creativity and leadership to entrepreneurship and community development. Our programs are designed to foster growth in various key areas that empower the youth for the future.</p>
+						<div class="border"></div>
+					</div>
 				</div>
-			</div>
-			<!-- /Section Title -->
+				<!-- /section title -->
 
-			<!-- Activity Item 1 -->
-			<div class="container py-5">
-				<div class="row">
-				  <!-- Card 1 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-book-outline" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Interactive Art & Craft Workshops</h5>
-						<p class="card-text">We provide a dynamic platform for the youth to explore their artistic potential through hands-on art and craft workshops, fostering creativity and collaboration.</p>
-					  </div>
-					</div>
-				  </div>
-			  
-				  <!-- Card 2 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-people-outline" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Leadership Development Programs</h5>
-						<p class="card-text">Our leadership programs aim to empower young minds to take on challenges and lead in both their communities and professional endeavors, encouraging initiative and responsibility.</p>
-					  </div>
-					</div>
-				  </div>
-			  
-				  <!-- Card 3 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-briefcase-outline" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Entrepreneurship and Innovation</h5>
-						<p class="card-text">Our entrepreneurship programs nurture young innovators by guiding them to launch sustainable projects, providing them with the resources and skills to succeed in the business world.</p>
-					  </div>
-					</div>
-				  </div>
-			  
-				  <!-- Card 4 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-crop" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Environmental Awareness Initiatives</h5>
-						<p class="card-text">We engage the youth in environmental conservation through community projects that highlight the importance of sustainability, green technology, and eco-friendly practices.</p>
-					  </div>
-					</div>
-				  </div>
-			  
-				  <!-- Card 5 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-heart-outline" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Health & Wellness Programs</h5>
-						<p class="card-text">We promote physical and mental well-being by organizing health and wellness programs, including fitness challenges, mental health workshops, and mindfulness activities.</p>
-					  </div>
-					</div>
-				  </div>
-			  
-				  <!-- Card 6 -->
-				  <div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100 text-center" style="background-color: #e6f7ff;">
-					  <div class="card-body">
-						<div class="mb-3">
-						  <i class="tf-ion-ios-alarm-outline" style="font-size: 2rem;"></i>
-						</div>
-						<h5 class="card-title">Community Outreach & Volunteering</h5>
-						<p class="card-text">Our community outreach programs are designed to empower the youth to give back through volunteerism, providing opportunities to make a tangible impact on society.</p>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			  
-</section> <!-- End section -->
-
-
-	<!-- Start Team Skills
-		=========================================== -->
-
-		<section class="team-skills section-sm" id="skills">
-			<div class="container">
-				<div class="row">
-		
-					<!-- section title -->
-					<div class="col-12">
-						<div class="title text-center">
-							<h2>Our Skills</h2>
-							<p>At TUY, we focus on equipping the youth with a wide range of skills, from creativity and leadership to entrepreneurship and community development. Our programs are designed to foster growth in various key areas that empower the youth for the future.</p>
-							<div class="border"></div>
-						</div>
-					</div>
-					<!-- /section title -->
-		
-					<div class="col-md-5">
-						<div class="team-skills-content">
-							<h2>Empowering Through Skill Development</h2>
-							<p>At TUY, we believe in hands-on learning, enabling the youth to develop real-world skills in a variety of fields. From creative arts to leadership and community service, we foster talent that creates a lasting impact in society.</p>
-							<a href="" class="btn btn-main mt-20">Contact Us</a>
-						</div>
-					</div>
-					<div class="col-md-6 col-md-offset-1">
-						<div class="progress-block">
-							<ul>
-								<li>
-									<span>Leadership Development</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 85%;"></div>
-									</div>
-								</li>
-								<li>
-									<span>Creative Arts & Design</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 90%;"></div>
-									</div>
-								</li>
-								<li>
-									<span>Entrepreneurship & Innovation</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 80%;"></div>
-									</div>
-								</li>
-								<li>
-									<span>Community Engagement</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 75%;"></div>
-									</div>
-								</li>
-								<li>
-									<span>Environmental Awareness</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 70%;"></div>
-									</div>
-								</li>
-								<li>
-									<span>Health & Wellness Advocacy</span>
-									<div class="progress">
-										<div class="progress-bar" style="width: 80%;"></div>
-									</div>
-								</li>
-							</ul>
-		
-						</div>
-					</div>
-				</div> <!-- End row -->
-		
-				<div class="row">
-					<div class="col-md-12">
-						<div id="clients-slider" class="clients-logo-slider">
-							<img src="images/client-logo/logo1.png" alt="Client 1">
-							<img src="images/client-logo/logo-2.png" alt="Client 2">
-							<img src="images/client-logo/logo-3.png" alt="Client 3">
-							<img src="images/client-logo/logo-4.png" alt="Client 4">
-							<img src="images/client-logo/logo-5.png" alt="Client 5">
-							<img src="images/client-logo/logo1.png" alt="Client 6">
-							<img src="images/client-logo/logo-2.png" alt="Client 7">
-							<img src="images/client-logo/logo-3.png" alt="Client 8">
-							<img src="images/client-logo/logo-4.png" alt="Client 9">
-							<img src="images/client-logo/logo-5.png" alt="Client 10">
-						</div>
-		
+				<div class="col-md-5">
+					<div class="team-skills-content">
+						<h2>Empowering Through Skill Development</h2>
+						<p>At TUY, we believe in hands-on learning, enabling the youth to develop real-world skills in a variety of fields. From creative arts to leadership and community service, we foster talent that creates a lasting impact in society.</p>
 					</div>
 				</div>
-			</div> <!-- End container -->
-		</section> <!-- End section -->
-		
-
-
-	<!--
-		Start Counter Section
-		==================================== -->
-		
-		<section class="counter-wrapper section-sm">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="title">
-							<h2>Our Impact</h2>
-							<p>At TUY, we are committed to empowering the youth by providing them with the necessary skills, resources, and opportunities to create positive change in their communities. Here are just a few milestones that reflect our impact.</p>
-						</div>
-					</div>
-		
-					<!-- first count item -->
-					<div class="col-md-3 col-sm-6 col-xs-6 text-center">
-						<div class="counters-item">
-							<i class="tf-ion-ios-people-outline"></i>
-							<div>
-								<span class="counter" data-count="500">0</span>
-							</div>
-							<h3>Youths Empowered</h3>
-						</div>
-					</div>
-					<!-- end first count item -->
-		
-					<!-- second count item -->
-					<div class="col-md-3 col-sm-6 col-xs-6 text-center">
-						<div class="counters-item">
-							<i class="tf-ion-ios-analytics-outline"></i>
-							<div>
-								<span class="counter" data-count="300">0</span>
-							</div>
-							<h3>Community Projects</h3>
-						</div>
-					</div>
-					<!-- end second count item -->
-		
-					<!-- third count item -->
-					<div class="col-md-3 col-sm-6 col-xs-6 text-center">
-						<div class="counters-item">
-							<i class="tf-ion-ios-chatboxes-outline"></i>
-							<div>
-								<span class="counter" data-count="120">0</span>
-							</div>
-							<h3>Workshops & Training Sessions</h3>
-						</div>
-					</div>
-					<!-- end third count item -->
-		
-					<!-- fourth count item -->
-					<div class="col-md-3 col-sm-6 col-xs-6 text-center">
-						<div class="counters-item kill-border">
-							<i class="tf-ion-ios-heart-outline"></i>
-							<div>
-								<span class="counter" data-count="1000">0</span>
-							</div>
-							<h3>Volunteer Hours</h3>
-						</div>
-					</div>
-					<!-- end fourth count item -->
-				</div> <!-- end row -->
-			</div> <!-- end container -->
-		</section> <!-- end section -->
-		
-
-
-	<!-- Start Testimonial
-=========================================== -->
-<section class="testimonial section" id="testimonial">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<!-- testimonial wrapper -->
-				<div class="testimonial-slider">
-					<!-- testimonial single -->
-					<div class="item text-center">
-						<i class="tf-ion-chatbubbles"></i>
-						<!-- client info -->
-						<div class="client-details">
-							<p>" I learnt how to communicate well with everyone" </p>
-						</div>
-						<!-- /client info -->
-						<!-- client photo -->
-						<div class="client-thumb">
-							<img src="images/blog/DSC_3263.JPG" class="img-fluid" alt="Student 1">
-						</div>
-						<div class="client-meta">
-							<h3>Desderio Bodo Derrick</h3>
-							<span>Mentorship Program</span>
-						</div>
-						<!-- /client photo -->
-					</div>
-					<!-- /testimonial single -->
-
-					<!-- testimonial single -->
-				
-					<!-- /testimonial single -->
-				
-					<!-- testimonial single -->
-					<!-- /testimonial single -->
-				</div>
-			</div> <!-- end col lg 12 -->
-		</div> <!-- End row -->
-	</div> <!-- End container -->
-</section> <!-- End Section -->
-
+				<div class="col-md-6 col-md-offset-1">
+        <div class="progress-block">
+            <ul>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                    </div>
+                    <span>Leadership Development</span>
+                </li>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                    <span>Creative Arts & Design</span>
+                </li>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <span>Entrepreneurship & Innovation</span>
+                </li>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                    <span>Community Engagement</span>
+                </li>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <span>Environmental Awareness</span>
+                </li>
+                <li>
+                    <div class="progress" style="height: 40px; border-radius: 50px;">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <span>Health & Wellness Advocacy</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+			</div> <!-- End row -->
+		</div> <!-- End container -->
+	</section> <!-- End section -->
 
 
 	<footer id="footer" class="bg-one">
-		<div class="top-footer">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<h3>About Us</h3>
-				<p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-				  <li><h3>Our Services</h3></li>
-				  <li><a href="#">Interactive Learning</a></li>
-				  <li><a href="#">Creative Projects</a></li>
-				  <li><a href="#">Collaborative Tools</a></li>
-				  <li><a href="#">Secure Platform</a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-				  <li><h3>Quick Links</h3></li>
-				  <li><a href="index.html#partners">Partners</a></li>
-				  <li><a href="about.html">About Us</a></li>
-				  <li><a href="get-involved.html">Volunteer</a></li>
-				  <li><a href="index.html#faq">FAQ’s</a></li>
-				  <li><a href="contact.html">Contact Us</a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-			  <div class="col-sm-3 col-md-3 col-lg-3">
-				<ul>
-					<li><h3>Connect with Us</h3></li>
-					<li><a href="https://wa.me/256777366181" target="_blank"><i class="tf-ion-social-whatsapp"></i></a></li>
-					<li><a href="https://x.com/tuy_ug" target="_blank"><i class="tf-ion-social-twitter"></i></a></li>
-					<li><a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank"><i class="tf-ion-social-facebook"></i></a></li>
-					<li><a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank"><i class="tf-ion-social-youtube"></i></a></li>
-					<li><a href="https://www.instagram.com/theunlimitedyouths?igsh=dHgxcWxnaThsdXRx" target="_blank"><i class="tf-ion-social-instagram"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>
-				</ul>
-			  </div>
-			  <!-- End of .col-sm-3 -->
-	  
-			</div>
-		  </div> <!-- end container -->
-		</div>
-		<div class="footer-bottom">
-		  <h5>Copyright 2025. All rights reserved.</h5>
-		  <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
-		  <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
-		</div>
-	  </footer> <!-- end footer -->
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <h3>About Us</h3>
+            <p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Our Services</h3></li>
+              <li><a href="#">Interactive Learning</a></li>
+              <li><a href="#">Creative Projects</a></li>
+              <li><a href="#">Collaborative Tools</a></li>
+              <li><a href="#">Secure Platform</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <ul>
+              <li><h3>Quick Links</h3></li>
+              <li><a href="index.html#partners">Partners</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="get-involved.html">Volunteer</a></li>
+              <li><a href="index.html#faq">FAQ’s</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="social-links">
+				<h3>Quick Links</h3>
+                        <a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/tuy_ug" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/theunlimitedyouths" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+						<a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h5>Copyright 2025. All rights reserved.</h5>
+      <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
+      <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
+    </div>
+  </footer>
 
     <!-- end Footer Area
     ========================================== -->
 
 
-    
-    <!-- 
+
+    <!--
     Essential Scripts
     =====================================-->
     <!-- Main jQuery -->
@@ -544,11 +857,12 @@ Fixed Navigation
     <script  src="plugins/google-map/gmap.js"></script>
 
     <!-- Form Validation -->
-    <script src="plugins/form-validation/jquery.form.js"></script> 
+    <script src="plugins/form-validation/jquery.form.js"></script>
     <script src="plugins/form-validation/jquery.validate.min.js"></script>
-    
+
     <!-- Bootstrap4 -->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Parallax -->
     <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
     <!-- lightbox -->
@@ -559,9 +873,43 @@ Fixed Navigation
     <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
     <!-- Smooth Scroll js -->
     <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-    
+
     <!-- Custom js -->
     <script src="js/script.js"></script>
+
+	<script>
+        // Counter Animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        // Intersection Observer for counter animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.target.classList.contains('counter')) {
+                    const target = parseInt(entry.target.getAttribute('data-count'));
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Initialize counters when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.counter').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 
   </body>
   </html>
