@@ -1,0 +1,67 @@
+/* Custom styles for the About page */
+
+/* World Map styles */
+.world-map-section {
+    padding: 60px 0;
+}
+
+#world_map_canvas {
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video section styles */
+.video-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.play-button-circle {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 128, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.play-button-circle:hover {
+    background-color: rgba(0, 128, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.play-button-circle span {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Team link section styles */
+.call-to-action .btn-main {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.call-to-action .btn-main:hover {
+    background-color: #3d8b40;
+    border-color: #3d8b40;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
