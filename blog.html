@@ -80,6 +80,21 @@
   .col-sm-3 ul li a i:hover {
       color: #007bff;
   }
+
+  .btn-main {
+            background-color: #2E7D32;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-main:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+            color: #ffffff;
+        }
   /* Simple Footer */
         .social-links a {
             display: inline-block;
@@ -95,6 +110,77 @@
 
         .social-links a:hover {
             background: var(--primary-color);
+        }
+
+        /* UPDATED RESPONSIVE BLOG GRID */
+        .blog-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Mobile First - 1 column */
+        @media (max-width: 575.98px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Small tablets - 1 column */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Medium tablets - 2 columns */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large screens - 2 columns (since you have sidebar) */
+        @media (min-width: 992px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Extra large screens - could go to 3 columns if no sidebar */
+        @media (min-width: 1400px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr); /* Keep 2 due to sidebar */
+            }
+        }
+
+        /* Ensure articles fit properly in grid without Bootstrap column classes */
+        .blog-grid article {
+            width: 100%;
+        }
+
+        /* Equal height for post items */
+        .post-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-item .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-item .content p {
+            flex-grow: 1;
+        }
+
+        /* Ensure proper spacing on mobile */
+        @media (max-width: 768px) {
+            .blog-grid {
+                gap: 1.5rem;
+            }
         }
     </style>
 
@@ -173,9 +259,9 @@ Fixed Navigation
 			  <a class="nav-link" href="contact.html">Contact Us</a>
 			</li>
 
-			<li class=" nav-item">
-				<a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-			</li>
+			<li class="nav-item">
+                            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+                        </li>
 		  </ul>
       </div>
     </nav>
@@ -200,12 +286,13 @@ End Fixed Navigation
 	</div>
 </section>
 
-
-<section class="posts section" id="posts">
-	<div class="container">
-		<div class="row">
-			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12 clearfix">
+<section class="blog-details section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-grid">
+          <!-- Single blog post -->
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/DSC_3311.JPG" alt="Interactive Learning" class="img-fluid transition-all hover-effect">
@@ -221,7 +308,7 @@ End Fixed Navigation
 			<!-- /single blog post -->
 
 			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12">
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/Screenshot (309).png" alt="Hands-On Experiment Stations" class="img-fluid transition-all hover-effect">
@@ -237,7 +324,7 @@ End Fixed Navigation
 			<!-- /single blog post -->
 
 			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12">
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/DSC_3346.JPG" alt="Adaptive Learning Challenges" class="img-fluid transition-all hover-effect">
@@ -253,7 +340,7 @@ End Fixed Navigation
 			<!-- /single blog post -->
 
 			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12 clearfix">
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/Screenshot (308).png" alt="Cooperative Learning Projects" class="img-fluid transition-all hover-effect">
@@ -269,7 +356,7 @@ End Fixed Navigation
 			<!-- /single blog post -->
 
 			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12">
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/DSC_3205.NEF.jpg" alt="Interactive Storytelling" class="img-fluid transition-all hover-effect">
@@ -285,7 +372,7 @@ End Fixed Navigation
 			<!-- /single blog post -->
 
 			<!-- Single blog post -->
-			<article class="col-md-4 col-sm-6 col-xs-12">
+			<article>
 				<div class="post-item transition-all hover-scale">
 					<div class="media-wrapper">
 						<img src="images/Screenshot (310).png" alt="Community-Based Projects" class="img-fluid transition-all hover-effect">
@@ -298,9 +385,74 @@ End Fixed Navigation
 					</div>
 				</div>
 		</article>
-</div>
-</div>
-</div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <!-- sidebar -->
+        <aside class="sidebar">
+          <div class="widget-search widget">
+            <form action="#">
+              <!-- Search bar -->
+              <input class="form-control" type="text" placeholder="Search..." name="search">
+              <button type="submit" class="widget-search-btn">
+                <i class="tf-ion-ios-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="widget-categories widget">
+            <h2>Categories</h2>
+            <!-- widget categories list -->
+            <ul class="widget-categories-list">
+              <li>
+                <a href="#">Tech Camp</a>
+              </li>
+              <li>
+                <a href="#">Mentorship</a>
+              </li>
+              <li>
+                <a href="#">Climate change</a>
+              </li>
+              <li>
+                <a href="#">Youth Skilling</a>
+              </li>
+            </ul>
+          </div>
+          <div class="widget-post widget">
+            <h2>Latest Post</h2>
+            <!-- latest post -->
+            <ul class="widget-post-list">
+              <li class="widget-post-list-item">
+                <div class="widget-post-image">
+                  <a href="#">
+                    <img src="images/green3.jpg" alt="post-img">
+                  </a>
+                </div>
+                <div class="widget-post-content">
+                  <a href="#">
+                    <h5>Held a workshop on reafforestation.</h5>
+                  </a>
+                  <h6>Mar 20, 2025</h6>
+                </div>
+              </li>
+              <li class="widget-post-list-item">
+                <div class="widget-post-image">
+                  <a href="#">
+                    <img src="images/tech.png" alt="post-img">
+                  </a>
+                </div>
+                <div class="widget-post-content">
+                  <a href="#">
+                    <h5>Met youth for mentorship.</h5>
+                  </a>
+                  <h6>April 17, 2025</h6>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -327,7 +479,7 @@ End Fixed Navigation
               <li><a href="index.html#partners">Partners</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="get-involved.html">Volunteer</a></li>
-              <li><a href="index.html#faq">FAQ’s</a></li>
+              <li><a href="index.html#faq">FAQ's</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
