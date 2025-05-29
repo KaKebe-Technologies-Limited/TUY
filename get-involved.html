@@ -79,7 +79,7 @@
       position: relative;
     }
     .testimonial::before {
-      content: '“';
+      content: '"';
       font-size: 40px;
       color: #2E7D32;
       position: absolute;
@@ -89,6 +89,56 @@
     .quiz-section {
       text-align: center;
       margin-top: 30px;
+    }
+    /* Article Styles */
+    .article-section {
+      padding: 60px 0;
+      background: #f8f9fa;
+    }
+    .article-title {
+      color: #2E7D32;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .article-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .article-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .pdf-viewer-section {
+      padding: 60px 0;
+      background: #fff;
+    }
+    .pdf-viewer-title {
+      color: #2E7D32;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .pdf-embed {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
     /* Simple Footer */
         .social-links a {
@@ -148,6 +198,18 @@
     #footer .footer-bottom h6 {
         text-align: center;
     }
+    
+    .article-title {
+        font-size: 2rem;
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+    
+    .pdf-container {
+        height: 500px;
+    }
 }
 
 /* Extra small screens - phones */
@@ -163,6 +225,14 @@
     #footer .top-footer .col-sm-3 {
         margin-bottom: 25px;
         padding: 0 15px;
+    }
+    
+    .article-image {
+        height: 200px;
+    }
+    
+    .pdf-container {
+        height: 400px;
     }
 }
   </style>
@@ -241,6 +311,77 @@
       </div>
     </div>
   </section>
+  
+  <!-- Article Section -->
+  <section class="article-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="article-title">TUY at the 10th Anniversary of Laudato Si</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/L1.jpg" alt="TUY at Laudato Si Seminar" class="article-image">
+        </div>
+        <div class="col-md-6">
+          <img src="images/L2.jpg" alt="Climate Justice Partnership" class="article-image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="article-content">
+            <p>When TUY attended 10th years Anniversary of Laudato Si seminar about climate change TUY, in collaboration with the Association of Religious in Uganda (ARU) and other Laudato Si' implementing partners, recently participated in a two-day gathering at Munyonyo Martyrs Shrine. The event marked 10 years since the encyclical Laudato Si' was published and celebrated the life of Pope Francis.</p>
+            
+            <p>Day one brought together 17 different organizations and groups under the theme, "Raising Hope for Climate Justice." The session began with an insightful presentation from the Kampala Archdiocese Pastoral Coordinator, Fr. Ambrose Bwangatto, who provided a brief overview of the encyclical and emphasized the importance of the partners' collaboration.</p>
+            
+            <p>The first day proved to be highly productive. By the end of the day, the team had formed a consortium, committing to continued joint efforts toward climate justice.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/L3.jpg" alt="Archbishop Celebration" class="article-image">
+        </div>
+        <div class="col-md-6">
+          <img src="images/L4.jpg" alt="Educational Exhibition" class="article-image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="article-content">
+            <p>Day two commenced with a vibrant outdoor Eucharistic celebration of the Mass, presided over by the Archbishop of Kampala Archdiocese, Rt. Rev. Paul Ssemogerere. He commended the partners for their unity and their dedication to raising awareness about the ecological crisis. The Archbishop also urged the congregation to remember Pope Francis in a special way, acknowledging his crucial role in bringing attention to the vital need for earth care, and reminded everyone of the call to ecological conversion.</p>
+            
+            <p>The partners, who had dedicated time on Day 1 to share their diverse involvements, activities, and efforts toward climate justice, also hosted an educational and inspiring exhibition showcasing various inventions and tools.</p>
+            
+            <p>The newly formed consortium presented a powerful statement that served as a commitment for their future endeavors, which is shared below.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PDF Viewer Section -->
+  <section class="pdf-viewer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="pdf-viewer-title">Consortium Statement Document</h2>
+          <div class="pdf-container">
+            <iframe class="pdf-embed" src="images/Statement-–-10th-Anniversary-of-Laudato-Si-Workshop-edited.pdf" type="application/pdf">
+              <p>Your browser does not support PDFs. <a href="images/Statement-–-10th-Anniversary-of-Laudato-Si-Workshop-edited.pdf">Download the PDF</a>.</p>
+            </iframe>
+          </div>
+          <div class="text-center mt-3">
+            <a href="images/Statement-–-10th-Anniversary-of-Laudato-Si-Workshop-edited.pdf" class="btn btn-main" style="background-color: #2E7D32; border-color: #2E7D32;" target="_blank">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="get-involved section" id="get-involved">
     <div class="container">
       <div class="row">
@@ -294,11 +435,11 @@
         <!-- Testimonial -->
         <div class="col-md-4">
           <div class="testimonial">
-            <p>“TUY helped me launch my startup and plant trees!”</p>
+            <p>"TUY helped me launch my startup and plant trees!"</p>
             <p><strong>– Jamal, 19, Entrepreneur</strong></p>
           </div>
           <div class="quiz-section">
-            <h4>What’s your climate superpower?</h4>
+            <h4>What's your climate superpower?</h4>
             <button class="btn btn-main" style="background-color: #2E7D32; border-color: #2E7D32;" onclick="openQuiz()">Take the Quiz</button>
           </div>
         </div>
@@ -328,7 +469,7 @@
               <li><a href="index.html#partners">Partners</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="get-involved.html">Volunteer</a></li>
-              <li><a href="index.html#faq">FAQ’s</a></li>
+              <li><a href="index.html#faq">FAQ's</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
