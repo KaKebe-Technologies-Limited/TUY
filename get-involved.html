@@ -151,10 +151,11 @@
             line-height: 35px;
             margin-right: 10px;
             transition: background 0.3s;
+            color: white;
         }
 
         .social-links a:hover {
-            background: var(--primary-color);
+            background: #2E7D32;
         }
 
         /* Footer Mobile Centering Styles */
@@ -249,54 +250,61 @@
     </div>
   </div>
   <header class="navigation fixed-top">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand logo" href="index.html">
-          <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-			<!-- Home -->
-			<li class="nav-item">
-			  <a class="nav-link" href="index.html">Home</a>
-			</li>
-			<!-- About Us -->
-			<li class="nav-item ">
-			  <a class="nav-link" href="about.html">About Us</a>
-			</li>
-			<!-- Our Programs -->
-			<li class="nav-item">
-			  <a class="nav-link" href="Activities.html">Our Programs</a>
-			</li>
+  <div class="container">
+    <!-- main nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- logo -->
+      <a class="navbar-brand logo" href="index.html">
+        <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
+      </a>
+      <!-- /logo -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-			<li class="nav-item">
-				<a class="nav-link" href="team.html">Team</a>
-			</li>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ml-auto text-center">
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!-- About Us -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <!-- Our Programs Dropdown -->
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown">
+                    Our Programs
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#poverty">Poverty Reduction</a></li>
+                    <li><a class="dropdown-item" href="#innovation">Innovation</a></li>
+                    <li><a class="dropdown-item" href="#climate">Climate Action</a></li>
+                </ul>
+            </li>
 
-			<!-- Blog -->
-			<li class="nav-item">
-			  <a class="nav-link" href="blog.html">Blog/News</a>
-			</li>
-			<!-- Donate -->
-			<!-- <li class="nav-item">
-			  <a class="nav-link" href="portfolio.html">Projects</a>
-			</li> -->
-			<!-- Contact -->
-			<li class="nav-item">
-			  <a class="nav-link" href="contact.html">Contact Us</a>
-      </li>
-			  <li class=" nav-item">
-				  <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-			  </li>
-			</ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+          
+
+          <!-- Blog -->
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog/News</a>
+          </li>
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /main nav -->
+  </div>
+</header>
   <section class="single-page-header get-involved-header">
     <div class="container">
       <div class="row">
@@ -313,7 +321,7 @@
   </section>
   
   <!-- Article Section -->
-  <section class="article-section">
+  <!-- <section class="article-section">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -359,10 +367,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- PDF Viewer Section -->
-  <section class="pdf-viewer-section">
+  <!-- <section class="pdf-viewer-section">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -380,7 +388,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="get-involved section" id="get-involved">
     <div class="container">
@@ -452,17 +460,16 @@
         <div class="row">
           <div class="col-sm-3 col-md-3 col-lg-3">
             <h3>About Us</h3>
-            <p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
+            <p>The Unlimited Youths (TUY) empowers Ugandan youth through awareness, capacity building, and mentorship, targeting employment and leadership by 2029, with programs in poverty reduction, climate action, and innovation.</p>
           </div>
           <div class="col-sm-3 col-md-3 col-lg-3">
-            <ul>
-              <li><h3>Our Services</h3></li>
-              <li><a href="#">Interactive Learning</a></li>
-              <li><a href="#">Creative Projects</a></li>
-              <li><a href="#">Collaborative Tools</a></li>
-              <li><a href="#">Secure Platform</a></li>
-            </ul>
-          </div>
+                        <ul>
+                        <li><h3>Our Programs</h3></li>
+                        <li><a href="programs.html#poverty">Poverty Reduction</a></li>
+                        <li><a href="programs.html#innovation">ICT Innovations</a></li>
+                        <li><a href="programs.html#climate">Climate Actions</a></li>
+                        </ul>
+                    </div>
           <div class="col-sm-3 col-md-3 col-lg-3">
             <ul>
               <li><h3>Quick Links</h3></li>

@@ -95,10 +95,11 @@
             line-height: 35px;
             margin-right: 10px;
             transition: background 0.3s;
+            color: white;
         }
 
         .social-links a:hover {
-            background: var(--primary-color);
+            background: #2E7D32;
         }
 
 		/* Footer Mobile Centering Styles */
@@ -200,36 +201,39 @@ Fixed Navigation
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-			<!-- Home -->
-			<li class="nav-item">
-			  <a class="nav-link" href="index.html">Home</a>
-			</li>
-			<!-- About Us -->
-			<li class="nav-item ">
-			  <a class="nav-link" href="about.html">About Us</a>
-			</li>
-			<!-- Our Programs -->
-			<li class="nav-item">
-			  <a class="nav-link" href="Activities.html">Our Programs</a>
-			</li>
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!-- About Us -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <!-- Our Programs Dropdown -->
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown">
+                    Our Programs
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#poverty">Poverty Reduction</a></li>
+                    <li><a class="dropdown-item" href="#innovation">Innovation</a></li>
+                    <li><a class="dropdown-item" href="#climate">Climate Action</a></li>
+                </ul>
+            </li>
 
-			<li class="nav-item active">
-				<a class="nav-link" href="team.html">Team</a>
-			</li>
+          <!-- Blog -->
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog/News</a>
+          </li>
+          <!-- Contact -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
 
-			<!-- Blog -->
-			<li class="nav-item">
-			  <a class="nav-link" href="blog.html">Blog/News</a>
-			</li>
-			<!-- Contact -->
-			<li class="nav-item">
-			  <a class="nav-link" href="contact.html">Contact Us</a>
-			</li>
-
-			<li class="nav-item">
-                            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-                        </li>
-			</ul>
+          <li class="nav-item">
+            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- /main nav -->
@@ -495,15 +499,14 @@ End Fixed Navigation
         <div class="row">
           <div class="col-sm-3 col-md-3 col-lg-3">
             <h3>About Us</h3>
-            <p>The Unlimited Youth is dedicated to empowering young minds through innovative digital experiences, fostering creativity, and providing tools that make learning and creation limitless. Join us on this exciting journey!</p>
+            <p>The Unlimited Youths (TUY) empowers Ugandan youth through awareness, capacity building, and mentorship, targeting employment and leadership by 2029, with programs in poverty reduction, climate action, and innovation.</p>
           </div>
           <div class="col-sm-3 col-md-3 col-lg-3">
             <ul>
-              <li><h3>Our Services</h3></li>
-              <li><a href="#">Interactive Learning</a></li>
-              <li><a href="#">Creative Projects</a></li>
-              <li><a href="#">Collaborative Tools</a></li>
-              <li><a href="#">Secure Platform</a></li>
+              <li><h3>Our Programs</h3></li>
+              <li><a href="programs.html#poverty">Poverty Reduction</a></li>
+              <li><a href="programs.html#innovation">ICT Innovations</a></li>
+              <li><a href="programs.html#climate">Climate Actions</a></li>
             </ul>
           </div>
           <div class="col-sm-3 col-md-3 col-lg-3">
