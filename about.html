@@ -6,7 +6,7 @@
     <meta name="description" content="Unlimited Youth is a creative platform for young individuals, offering interactive learning and community engagement through innovative web-based experiences.">
     <!-- Meta keywords for better SEO -->
     <meta name="keywords" content="Unlimited Youth, interactive learning, youth platform, community engagement, educational web app, innovative youth activities, web development, creative projects">
-    <meta name="author" content="Kakebe.com">
+    <meta name="author" content="kakebe.tech">
     <!-- Title optimized for SEO -->
     <title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
     <!-- Mobile Specific Meta -->
@@ -138,6 +138,71 @@
           padding: 0 15px;
         }
       }
+    .justified-text {
+        text-align: justify;
+        text-justify: inter-word; /* Distributes space evenly between words */
+        line-height: 1.6; /* Improves readability with vertical spacing */
+        font-size: 16px; /* Matches body text from style.css */
+        color: #848484; /* Consistent with style.css p color */
+        hyphens: auto; /* Optional: Allows hyphenation for long words (browser support varies) */
+    }
+
+    /* Mobile fallback: Justification can look uneven on small screens */
+    @media (max-width: 768px) {
+        .justified-text {
+            text-align: left; /* Reverts to left-align for better mobile flow */
+        }
+    }
+    .team-photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: block;
+        transition: transform 0.3s ease; /* Subtle zoom on hover */
+    }
+
+    .team-member:hover .team-photo {
+        transform: scale(1.05);
+    }
+
+    .bio {
+        font-size: 14px;
+        margin-top: 10px;
+        min-height: 60px; /* Ensures 2-3 line space */
+    }
+
+    .member-content h3 {
+        font-size: 18px;
+        color: #1a2a44;
+        margin-bottom: 5px;
+    }
+
+    .member-content span {
+        font-size: 14px;
+        color: #2E7D32;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Category headings */
+    h3.text-center.color {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .team-photo {
+            width: 120px;
+            height: 120px;
+        }
+        .bio {
+            font-size: 13px;
+        }
+    }
     </style>
   </head>
   <body id="body">
@@ -200,7 +265,12 @@
         <div class="row">
           <div class="col-md-6 mt-20">
             <h2>About The Unlimited Youths</h2>
-            <p>The Unlimited Youths (TUY) is an organization with a vision of fostering prosperous and successful youth in Uganda.  TUY achieves this by focusing on awareness creation, capacity building, and mentorship. By 2029, TUY aims to enable 1000 youths to secure gainful employment, become leaders of change, and thrive across Uganda. The organization's strategic approach includes strengthening its institutional capacity and ensuring sustainability, while implementing programs centered on Poverty Reduction, Climate Change/Action, and Innovation.</p>
+            <p class="justified-text">The Unlimited Youths (TUY) is an organization with a vision of fostering prosperous
+              and successful youth in Uganda. TUY achieves this by focusing on awareness creation, capacity building, and
+              mentorship. By 2029, TUY aims to enable 1000 youths to secure gainful employment, become leaders of change,
+              and thrive across Uganda. The organization's strategic approach includes strengthening its institutional
+              capacity and ensuring sustainability, while implementing programs centered on Poverty Reduction, Climate
+              Change/Action, and Innovation.</p>
           </div>
           <div class="col-md-6" style="display: flex; align-items: center; justify-content: center;">
             <img class="img-fluid rounded" src="images/bg-about.jpg" alt="The Unlimited Youth Logo">
@@ -213,7 +283,7 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="card h-100 shadow rounded p-3" style="background-color: #e6f4ff;">
-              <div class="card-body">
+              <div class="card-body text-center">
                 <h3 class="card-title">Our Mission</h3>
                 <p class="card-text">
                   To empower the youth to solve 21st-century developmental challenges through awareness creation, capacity building, and mentorship.
@@ -223,7 +293,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <div class="card h-100 shadow rounded p-3" style="background-color: #e6f4ff;">
-              <div class="card-body">
+              <div class="card-body text-center">
                 <h3 class="card-title">Our Vision</h3>
                 <p class="card-text">
                   Prosperous and successful youth in Uganda.
@@ -341,145 +411,180 @@
         <div class="row">
           <div class="col-12">
             <div class="title text-center">
-              <h2>Our Team</h2>
-              <p>Meet the People Behind TUY</p>
+              <h2>Our <span class="color">Team</span></h2>
+              <p class="justified-text">Meet the dedicated individuals driving TUY's mission. From board oversight to
+                on-ground volunteers, our team is committed to youth empowerment through poverty reduction, climate action,
+                and innovation.</p>
               <div class="border"></div>
             </div>
           </div>
-          <!-- team member -->
-          <div class="col-md-3 col-sm-6">
+        </div>
+
+        <!-- Board Members -->
+        <div class="row mb-5 justify-content-center">
+          <div class="col-12">
+            <h3 class="text-center mb-4 color">Board Members</h3>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
             <div class="team-member text-center">
               <div class="member-photo">
-                <!-- member photo -->
-                <img class="img-fluid rounded-circle" src="images/team/Innocent.jpg" alt="Innocent">
-                <!-- /member photo -->
-                <!-- member social profile -->
+                <img class="img-fluid team-photo" src="images/team/joshua okot.jpg" alt="Okot Joshua">
+                <!-- Real photo; replace if needed -->
                 <div class="mask">
                   <ul class="clearfix">
-                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/okot-joshua" target="_blank"><i
+                          class="tf-ion-social-linkedin"></i></a></li> <!-- Update to real links -->
                     <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
                   </ul>
                 </div>
-                <!-- /member social profile -->
               </div>
-              <!-- member name & designation -->
+              <div class="member-content">
+                <h3>Okot Joshua</h3>
+                <span>Chairperson, Board of Directors</span>
+                <p class="bio">Okot brings over 10 years of experience in youth advocacy and sustainable
+                  development. He leads strategic initiatives on poverty reduction and has mentored 500+ young leaders in
+                  Uganda. His vision aligns with TUY's goal of fostering leadership by 2029.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add 1-2 more Board Members; duplicate col-md-3 block --><!-- 
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <img class="img-fluid team-photo" src="images/team/board_member2.jpg" alt="Placeholder Board Member">
+                <div class="mask">
+                  <ul class="clearfix">
+                    <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="member-content">
+                <h3>Jane Doe</h3>
+                <span>Vice Chair</span>
+                <p class="bio">With expertise in climate policy, Jane oversees environmental programs and has
+                  published research on green jobs in East Africa. She ensures TUY's initiatives remain innovative and
+                  impactful for youth.</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Management Team -->
+        <div class="row mb-5 justify-content-center">
+          <div class="col-12">
+            <h3 class="text-center mb-4 color">Management Team</h3>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="team-member text-center">
+              <div class="member-photo">
+                <img class="img-fluid team-photo" src="images/team/innocent.jpg" alt="Innocent Byegarazo">
+                <!-- Use existing Innocent -->
+                <div class="mask">
+                  <ul class="clearfix">
+                    <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+                  </ul>
+                </div>
+              </div>
               <div class="member-content">
                 <h3>Innocent Byegarazo</h3>
                 <span>Institutional/Donor Relations Officer</span>
-                <p>A passionate advocate for social justice, sustainability, and African development.</p>
+                <p class="bio">A passionate advocate for social justice, sustainability, and African
+                  development, Innocent manages donor partnerships and fundraising. He has secured grants for 10+ youth
+                  projects and builds bridges with NGOs for collaborative impact.</p>
               </div>
-              <!-- /member name & designation -->
             </div>
           </div>
-          <!-- end team member -->
-
-          <!-- team member -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 mb-4">
             <div class="team-member text-center">
               <div class="member-photo">
-                <!-- member photo -->
-                <img class="img-fluid rounded-circle" src="images/team/Isaac.jpg" alt="Isaac">
-                <!-- /member photo -->
-                <!-- member social profile -->
+                <img class="img-fluid team-photo" src="images/team/isaac.jpg" alt="Basembera Isaac">
+                <!-- Use existing Isaac -->
                 <div class="mask">
                   <ul class="clearfix">
-                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
                     <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
                   </ul>
                 </div>
-                <!-- /member social profile -->
               </div>
-              <!-- member name & designation -->
               <div class="member-content">
                 <h3>Basembera Isaac</h3>
                 <span>Versatile Computer Scientist</span>
-                <p>Passion for data analysis, visualization, networks, cybersecurity, multimedia, web design, and databases</p>
+                <p class="bio">With a passion for data analysis, visualization, networks, cybersecurity,
+                  multimedia, web design, and databases, Isaac drives TUY's tech innovations. He develops digital tools for
+                  youth training and ensures secure, scalable platforms.</p>
               </div>
-              <!-- /member name & designation -->
             </div>
           </div>
-          <!-- end team member -->
+          <!-- Add 1-2 more Management; duplicate as needed -->
+        </div>
 
-          
-        </div> <!-- End row -->
-      </div> <!-- End container -->
-    </section>
-    <section class="team" id="team">
-      <div class="container">
-        <div class="row">
+        <!-- Volunteers -->
+        <div class="row mb-5 justify-content-center">
           <div class="col-12">
-            <div class="title text-center">
-              <h2>Our Volunteers</h2>
-              <p>Meet the People Behind TUY</p>
-              <div class="border"></div>
-            </div>
+            <h3 class="text-center mb-4 color">Volunteers</h3>
           </div>
-          <!-- team member -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 mb-4">
             <div class="team-member text-center">
               <div class="member-photo">
-                <!-- member photo -->
-                <img class="img-fluid rounded-circle" src="images/team/okello.jpg" alt="okello">
-                <!-- /member photo -->
-                <!-- member social profile -->
+                <img class="img-fluid team-photo" src="images/team/okello.jpg" alt="Okello Brian Jabez">
+                <!-- Existing Okello -->
                 <div class="mask">
                   <ul class="clearfix">
-                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
                     <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
                   </ul>
                 </div>
-                <!-- /member social profile -->
               </div>
-              <!-- member name & designation -->
               <div class="member-content">
-                <h3>Okello brian Jabez</h3>
-                <span>medical Volunteer</span>
-                <p>Guides Climate Advocacy and Leadership, expert in youth policy.</p>
+                <h3>Okello Brian Jabez</h3>
+                <span>Medical Volunteer</span>
+                <p class="bio">Okello guides climate advocacy and leadership efforts, serving as an expert in
+                  youth policy. He organizes health-focused workshops and mobilizes communities for sustainable practices in
+                  rural Uganda.</p>
               </div>
-              <!-- /member name & designation -->
             </div>
           </div>
-          <!-- end team member -->
-          <!-- team member -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 mb-4">
             <div class="team-member text-center">
               <div class="member-photo">
-                <!-- member photo -->
-                <img class="img-fluid rounded-circle" src="images/team/sarah.jpg" alt="okello">
-                <!-- /member photo -->
-                <!-- member social profile -->
+                <img class="img-fluid team-photo" src="images/team/sarah.jpg" alt="Okoi Sarah Fortunate">
+                <!-- Existing Sarah -->
                 <div class="mask">
                   <ul class="clearfix">
-                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
                     <li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
                   </ul>
                 </div>
-                <!-- /member social profile -->
               </div>
-              <!-- member name & designation -->
               <div class="member-content">
                 <h3>Okoi Sarah Fortunate</h3>
-                <span>Accounting and finance Volunteer</span>
-                <p>Manages financial operations and ensures compliance with regulations.</p>
+                <span>Accounting and Finance Volunteer</span>
+                <p class="bio">Sarah manages financial operations and ensures compliance with regulations for
+                  TUY's programs. Her expertise supports budgeting for innovation workshops and tracks impact metrics for
+                  donors.</p>
               </div>
-              <!-- /member name & designation -->
             </div>
           </div>
-          <!-- end team member -->
-        </div> <!-- End row -->
+          <!-- Add 2-4 more Volunteers; duplicate col-md-3 blocks -->
+        </div>
 
-        <!-- Join Our Team Section -->
-        <div class="row mt-5">
+        <!-- Join Our Team CTA -->
+        <div class="row">
           <div class="col-12 text-center">
-            <p>Want to work with us? Check for opportunities.</p>
-            <a href="contact.html" class="btn btn-main" style="background-color: #2E7D32; color: white;">Contact Us</a>
+            <p class="text-center">Want to join our team or volunteer? Check for opportunities and contribute to
+              empowering Uganda's youth.</p>
+            <a href="get-involved.html" class="btn btn-main">Get Involved</a>
           </div>
         </div>
-      </div> <!-- End container -->
+      </div>
     </section>
     <footer id="footer" class="bg-one">
       <div class="top-footer">

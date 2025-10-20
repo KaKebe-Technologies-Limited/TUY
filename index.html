@@ -60,6 +60,32 @@
         .col-sm-3 ul li a i:hover {
             color: #007bff;
         }
+        #faqWrapper {
+            display: none; /* Move initial display here for consistency */
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        #faqWrapper.show {
+            opacity: 1;
+        }
+        .faq-container {
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .faq-container.show {
+            display: block;
+            opacity: 1;
+            max-height: 1000px; /* Adjust based on content height, or use 'auto' with JS */
+        }
+        .view-faqs {
+            display: block;
+            margin: 0 auto 20px;
+        }
         .faq.section-sm {
             background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             padding: 60px 0;
@@ -143,6 +169,7 @@
             margin: 0 auto 40px;
         }
         .partner-carousel .partner-item {
+            display: flex;
             background-color: #ffffff;
             border-radius: 12px;
             padding: 20px;
@@ -158,6 +185,12 @@
         .partner-carousel .partner-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .partner-carousel .partner-item * {
+            align-self: center;
+            justify-self: center;
+            margin-left: auto;
+            margin-right: auto;
         }
         .partner-carousel .partner-item i {
             font-size: 50px;
@@ -483,77 +516,132 @@
             <div class="row">
                 <div class="col-12">
                     <div class="title text-center">
-                        <h2>Frequently Asked <span class="color">Questions</span></h2>
-                        <p>Find answers to common questions about The Unlimited Youths, our programs, and how you can get involved in our mission to empower youth for a sustainable future.</p>
+                        <h2>Frequently Asked <span class="color">Questions</span>
+                        </h2>
+                        <p>Find answers to common questions about The Unlimited
+                            Youths, our programs, and how you can get involved in
+                            our mission to empower youth for a sustainable future.
+                        </p>
                         <div class="border"></div>
                     </div>
                 </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-main" id="toggleFaqBtn">View
+                        FAQs</button>
+                </div>
                 <div class="col-12">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                    How can I join a program?
-                                </button>
-                            </h2>
-                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Visit Our Programs page, pick your interest, and click ‘Join Now’ to sign up via Get Involved.
+                    <div id="faqWrapper" style="display: none;">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading1">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse1"
+                                        aria-expanded="false"
+                                        aria-controls="faqCollapse1">
+                                        How can I join a program?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse1"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="faqHeading1"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Visit Our Programs page, pick your interest,
+                                        and click ‘Join Now’ to sign up via Get
+                                        Involved.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Other accordion items remain unchanged -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading2">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse2"
+                                        aria-expanded="false"
+                                        aria-controls="faqCollapse2">
+                                        Where do you operate?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse2"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="faqHeading2"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We primarily operate in Uganda, with a focus
+                                        on empowering youth across the country. See
+                                        our About Us page for more details.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading3">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse3"
+                                        aria-expanded="false"
+                                        aria-controls="faqCollapse3">
+                                        How is my donation used?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse3"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="faqHeading3"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Every dollar funds training, trees, or
+                                        startups. Check progress on Our Programs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading4">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse4"
+                                        aria-expanded="false"
+                                        aria-controls="faqCollapse4">
+                                        Can I volunteer remotely?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse4"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="faqHeading4"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes! Options include online coding
+                                        mentorship or advocacy campaigns. See Get
+                                        Involved.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading5">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse5"
+                                        aria-expanded="false"
+                                        aria-controls="faqCollapse5">
+                                        How do you protect my data?
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse5"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="faqHeading5"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We use SSL encryption and comply with
+                                        privacy laws. Read our Privacy Policy.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                    Where do you operate?
-                                </button>
-                            </h2>
-                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We primarily operate in Uganda, with a focus on empowering youth across the country. See our About Us page for more details.
-                                </div>
-                            </div>
+                        <div class="text-center mt-4">
+                            <p>Still curious? We’re here to help.</p>
+                            <a href="contact.html" class="btn btn-main">Contact
+                                Us</a>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                    How is my donation used?
-                                </button>
-                            </h2>
-                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Every dollar funds training, trees, or startups. Check progress on Our Programs.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                                    Can I volunteer remotely?
-                                </button>
-                            </h2>
-                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Yes! Options include online coding mentorship or advocacy campaigns. See Get Involved.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-                                    How do you protect my data?
-                                </button>
-                            </h2>
-                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We use SSL encryption and comply with privacy laws. Read our Privacy Policy.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <p>Still curious? We’re here to help.</p>
-                        <a href="contact.html" class="btn btn-main">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -621,23 +709,23 @@
                 <div class="col-12">
                     <div class="partner-carousel">
                         <div class="partner-item">
-                            <a href="https://www.startboomdigital.com/" target="_blank">
+                            <a href="https://www.startboomdigital.com/" target="_blank" rel="noopener">
                                 <img src="images/startboom-logo.jpg" alt="SolarWorks Inc." class="partner-logo">
                             </a>
                         </div>
                         <div class="partner-item">
-                            <a href="https://www.kcca.go.ug/" target="_blank">
+                            <a href="https://www.kcca.go.ug/" target="_blank" rel="noopener">
                                 <img src="images/KCCA-logo.jpg" alt="GreenFuture NGO" class="partner-logo">
                             </a>
                         </div>
                         <div class="partner-item">
-                            <a href="https://kerinaturals.com/" target="_blank">
+                            <a href="https://kerinaturals.com/" target="_blank" rel="noopener">
                                 <img src="images/kernaturals-logo.png" alt="TechForGood" class="partner-logo">
                             </a>
                         </div>
                         <div class="partner-item">
-                            <a href="https://www.kakebe.tech" target="_blank">
-                                <img src="images/kakebe-logo.png" alt="Youth Empowerment Fund" class="partner-logo">
+                            <a href="https://www.kakebe.tech" target="_blank" rel="noopener">
+                                <img src="images/kakebe-logo-long.png" alt="Youth Empowerment Fund" class="partner-logo">
                             </a>
                         </div>
                     </div>
@@ -693,19 +781,19 @@
                     <div class="col-sm-3 col-md-3 col-lg-3">
                         <div class="social-links">
                             <h3>Quick Links</h3>
-                            <a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank">
+                            <a href="https://www.facebook.com/profile.php?id=100071875973848" target="_blank" rel="noopener">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://x.com/tuy_ug" target="_blank">
+                            <a href="https://x.com/tuy_ug" target="_blank" rel="noopener">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="https://www.instagram.com/theunlimitedyouths" target="_blank">
+                            <a href="https://www.instagram.com/theunlimitedyouths" target="_blank" rel="noopener">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a" target="_blank">
+                            <a href="https://www.linkedin.com/in/the-unlimited-youth-tuy-571a1516a" target="_blank" rel="noopener">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank">
+                            <a href="https://youtube.com/@theunlimitedyouths?si=0uiVMKWz6Eru2avs" target="_blank" rel="noopener">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -745,10 +833,11 @@
     <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            // Existing accordion button logic
             const accordionButtons = document.querySelectorAll('.accordion-button');
             accordionButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const target = document.querySelector(this.getAttribute('data-bs-target'));
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     accordionButtons.forEach(btn => {
@@ -771,6 +860,42 @@
                 });
             });
 
+            // FAQ toggle button logic
+            const toggleFaqBtn = document.getElementById('toggleFaqBtn');
+            const faqWrapper = document.getElementById('faqWrapper');
+            toggleFaqBtn.addEventListener('click', function () {
+                if (faqWrapper.style.display === 'block') {
+                    // Hide: Start from current height, animate to 0, then hide display
+                    faqWrapper.classList.remove('show');
+                    faqWrapper.style.height = faqWrapper.scrollHeight + 'px'; // Set to current height for transition start
+                    setTimeout(() => {
+                        faqWrapper.style.height = '0';
+                    }, 10); // Brief delay to trigger transition
+                    const transitionEndHandler = () => {
+                        faqWrapper.style.display = 'none';
+                        faqWrapper.style.height = ''; // Reset for next show
+                        faqWrapper.removeEventListener('transitionend', transitionEndHandler);
+                    };
+                    faqWrapper.addEventListener('transitionend', transitionEndHandler);
+                    this.textContent = 'View FAQs';
+                    this.style.marginBottom = '0px';
+                } else {
+                    // Show: Display block, calculate height, animate from 0 to full
+                    faqWrapper.style.display = 'block';
+                    setTimeout(() => {
+                        const height = faqWrapper.scrollHeight + 'px';
+                        faqWrapper.style.height = '0'; // Ensure starts at 0
+                        setTimeout(() => {
+                            faqWrapper.style.height = height;
+                            faqWrapper.classList.add('show');
+                        }, 10);
+                    }, 0); // Delay for browser to calculate scrollHeight after display change
+                    this.textContent = 'Hide FAQs';
+                    this.style.marginBottom = '50px';
+                }
+            });
+
+            // Existing Slick carousel logic
             $('.partner-carousel').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -794,6 +919,14 @@
                 ]
             });
         });
+    </script>
+    <script>
+    document.getElementById('toggleFaqBtn').addEventListener('click', function () {
+        console.log('Button clicked'); // Debug log
+        const faqWrapper = document.getElementById('faqWrapper');
+        faqWrapper.classList.toggle('show');
+        this.textContent = faqWrapper.classList.contains('show') ? 'Hide FAQs' : 'View FAQs';
+    });
     </script>
 </body>
 </html>
