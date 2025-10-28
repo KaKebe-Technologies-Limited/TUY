@@ -14,7 +14,7 @@
 	<meta name="author" content="kakebe.tech">
 
 	<!-- Title optimized for SEO -->
-	<title>Unlimited Youth - Interactive Learning and Creative Community for Youth</title>
+	<title>Our Programs | </title>
 
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,6 +95,111 @@
             max-width: 600px;
             margin: 0 auto;
             opacity: 0.9;
+        }
+
+        .counter-col {
+            display: flex;
+        }
+
+        .counter-col .counter-container {
+            flex: 1;
+            margin: 0 auto;
+        }
+
+        /* Style for the counter container */
+        .counter-container {
+        /* White background for contrast */
+        background-color: #ffffff;
+        /* Internal padding for spacing */
+        padding: 40px 60px;
+        /* Rounded corners for a softer design */
+        border-radius: 12px;
+        /* Light shadow for depth */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        /* Center the text */
+        text-align: center;
+        /* Max width */
+        max-width: 70vw;
+        /* Margin */
+        margin: 0 auto;
+        }
+
+        /* Style for the counter number */
+        .counter {
+        /* Large font size for visibility */
+        font-size: 40px;
+        /* Bold text */
+        font-weight: bold;
+        /* Initial text color */
+        color: #3a86ff;
+        /* Relative positioning for pseudo-elements */
+        position: relative;
+        /* Inline-block display to manage dimensions and margins */
+        display: inline-block;
+        /* Transition for color change */
+        transition: color 0.3s ease;
+        }
+
+        .counter.green-counter {
+            color: #2E7D32;
+        }
+
+        .counter-info {
+        /* Font styles for the info text */
+        font-size: calc(1.325rem);
+        font-weight: 500;
+        line-height: 1.2;
+        /* Text color */
+        color: #555555;
+        }
+
+        /* Style applied when the 'animate' class is added */
+        .counter.animate {
+        /* Change text color for animation */
+        color: #8338ec;
+        }
+
+        .counter.green-counter.animate {
+            color: #388E3C;
+        }
+
+        /* Style for the plus sign that appears after the number */
+        .counter::after {
+        /* Add content: the '+' sign */
+        content: '+';
+        /* Font size for the plus sign */
+        font-size: 20px;
+        /* Absolute positioning relative to the counter */
+        position: absolute;
+        /* Position at the top-right of the number */
+        top: 10px;
+        right: -15px;
+        /* Initial color of the plus sign */
+        color: #3a86ff;
+        /* Initial opacity set to zero for animation */
+        opacity: 0;
+        /* Initial translation for sliding effect */
+        transform: translateX(10px);
+        /* Transitions for opacity and transformation */
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+
+        .counter.green-counter::after {
+            color: #2E7D32;
+        }
+
+        /* Animation style for the plus sign when 'animate' class is present */
+        .counter.animate::after {
+        /* Full opacity to make the plus sign visible */
+        opacity: 1;
+        /* Reset translation to bring the plus sign into position */
+        transform: translateX(0);
+        /* Change color of the plus sign for animation */
+        color: #8338ec;
+        }
+
+        .counter.green-counter.animate::after {
+            color: #388E3C;
         }
 
         .program-section {
@@ -481,6 +586,7 @@
         }
         
         .gallery-card {
+            position: relative;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -607,41 +713,43 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand logo" href="index.html">
-                    <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
+                  <img src="images/TUY_Logo.png" alt="The Unlimited Youths Logo" style="max-height: 50px; width: auto;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown">
-                                Our Programs
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="#poverty">Poverty Reduction</a></li>
-                                <li><a class="dropdown-item" href="#innovation">Innovation</a></li>
-                                <li><a class="dropdown-item" href="#climate">Climate Action</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog/News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn-main" href="get-involved.html">Donate Now</a>
-                        </li>
-                    </ul>
+                  <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown">
+                        Our Programs
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="programs.html#poverty">Poverty Reduction</a></li>
+                        <li><a class="dropdown-item" href="programs.html#innovation">Innovation</a></li>
+                        <li><a class="dropdown-item" href="programs.html#climate">Climate Action</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Blog/News</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="get-involved.html">Get Involved</a> <!-- New menu item -->
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link btn-main" href="get-involved.html#donate">Donate Now</a> <!-- Update to anchor to Donate section -->
+                    </li>
+                  </ul>
                 </div>
             </nav>
         </div>
@@ -737,6 +845,36 @@
                         </div>
                     </div>
 
+                    <div class="row my-5">
+                        <div class="col-lg-12">
+                            <h3 class="text-center mb-4">Program Statistics</h3>
+                        </div>
+                        <div class="counter-col col-md-6 col-lg-3">
+                            <div class="counter-container mt-5">
+                                <div class="counter" data-target="20000">0</div>
+                                <div class="counter-info">Youth Empowered</div>
+                            </div>
+                        </div>
+                        <div class="counter-col col-md-6 col-lg-3">
+                            <div class="counter-container mt-5">
+                                <div class="counter" data-target="4">0</div>
+                                <div class="counter-info">Core Training Programs</div>
+                            </div>
+                        </div>
+                        <div class="counter-col col-md-6 col-lg-3">
+                            <div class="counter-container mt-5">
+                                <div class="counter" data-target="5">0</div>
+                                <div class="counter-info">Districts Reached</div>
+                            </div>
+                        </div>
+                        <div class="counter-col col-md-6 col-lg-3">
+                            <div class="counter-container mt-5">
+                                <div class="counter" data-target="100">0</div>
+                                <div class="counter-info">Startups Supported</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row mt-5">
                         <div class="col-lg-12">
                             <h3 class="text-center mb-4">Program Impact</h3>
@@ -783,35 +921,35 @@
                     <h2 class="gallery-title">Transforming Lives Through Skills Development</h2>
                     <div class="gallery-container">
                         <div class="gallery-card">
-                            <img src="images/vocational.png" alt="Vocational training">
+                            <img src="images/green3.jpg" alt="Youth Life Skills Training">
                             <div class="gallery-caption">
-                                <h5>Vocational Training</h5>
-                                <p>Youth learning tailoring skills</p>
+                                <h5>Youth Life Skills Training</h5>
+                                <p>Building confidence, leadership, and interpersonal skills among youth</p>
                             </div>
                         </div>
                         <div class="gallery-card">
-                            <img src="images/" alt="Financial literacy">
+                            <img src="images/skill2.png" alt="Financial Literacy Training">
                             <div class="gallery-caption">
                                 <h5>Financial Literacy Workshop</h5>
-                                <p>Learning money management skills</p>
+                                <p>Empowering young people to make informed financial decisions</p>
                             </div>
                         </div>
                         <div class="gallery-card">
                             <img src="images/mentorship.png" alt="Mentorship session">
                             <div class="gallery-caption">
                                 <h5>Mentorship Session</h5>
-                                <p>Career guidance from industry experts</p>
+                                <p>Connecting youth to mentors who inspire, guide, and empower</p>
                             </div>
                         </div>
                         <div class="gallery-card">
                             <img src="images/ict.png" alt="Computer training">
                             <div class="gallery-caption">
                                 <h5>ICT Training</h5>
-                                <p>Youth learning computer skills</p>
+                                <p>Preparing youth for a digital and knowledge-based economy</p>
                             </div>
                         </div>
                         <div class="gallery-card">
-                            <img src="images/business.JPG" alt="Business startup">
+                            <img src="images/innovation1.jpg" alt="Business startup">
                             <div class="gallery-caption">
                                 <h5>Business Incubation</h5>
                                 <p>Youth launching small businesses</p>
@@ -1275,8 +1413,8 @@
         </div>
         <div class="footer-bottom">
             <h5>Copyright 2025. All rights reserved.</h5>
-            <h6>Designed and Developed by <a href="kakebe.com">Kakebe Technologies</a></h6>
-            <h6>Distributed by <a href="https://kakebe.com/">Kakebe Technologies</a></h6>
+            <h6>Designed and Developed by <a href="kakebe.tech">Kakebe Technologies</a></h6>
+            <h6>Distributed by <a href="https://kakebe.tech/">Kakebe Technologies</a></h6>
         </div>
     </footer>
 
@@ -1293,7 +1431,7 @@
     <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
     <script src="js/script.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
     <script>
         // Program navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -1344,6 +1482,43 @@
                 };
                 
                 updateCount();
+            });
+        });
+    </script>
+    <script>
+        // Wait for the DOM to be fully loaded before executing the code
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all elements with the class 'counter'
+            const counters = document.querySelectorAll('.counter');
+
+            // Iterate through each 'counter' element found
+            counters.forEach(counter => {
+                // Function to animate the counter
+                const animateCounter = () => {
+                    // Get the target value from data-target attribute and convert it to a number
+                    const target = +counter.getAttribute('data-target');
+                    // Get the current value displayed in the counter and convert it to a number
+                    const current = +counter.innerText;
+                    // Calculate the increment for each animation frame
+                    const increment = target / 200;
+
+                    // Check if the current value is less than the target
+                    if (current < target) {
+                        // Update the counter text by incrementing the current value
+                        counter.innerText = Math.ceil(current + increment);
+                        // Request the next animation frame
+                        requestAnimationFrame(animateCounter);
+                    } else {
+                        // If the current value has reached or surpassed the target
+                        // Set the counter text to the exact target value
+                        counter.innerText = target;
+                        // Add the 'animate' class to trigger CSS animations
+                        counter.classList.add('animate');
+                    }
+                };
+
+                // Start the counter animation
+                animateCounter();
             });
         });
     </script>

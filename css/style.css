@@ -441,14 +441,14 @@ a:focus, a:hover {
 }
 
 .single-page-header {
-  background-image: url("../images/WhatsApp Image 2025-03-31 at 17.57.05_236b8a3c.jpg");
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/WhatsApp Image 2025-03-31 at 17.57.05_236b8a3c.jpg");
   background-size: cover;
   padding: 140px 0 70px;
   text-align: center;
   color: #fff;
   position: relative;
 }
-
+/* 
 .single-page-header:before {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -457,6 +457,16 @@ a:focus, a:hover {
   right: 0;
   left: 0;
   bottom: 0;
+} */
+
+.single-page-header h2 {
+  color: #2fb436;
+  font-size: 36pt;
+  font-weight: bold;
+}
+.single-page-header p {
+  color: #ffffffb2;
+  font-size: 16px;
 }
 
 /*=================================================================
