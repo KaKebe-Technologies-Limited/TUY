@@ -2611,13 +2611,73 @@ header h2 {
   transform: scale(1.05);
 }
 
-/* Mobile Responsiveness */
+/*=================================================================
+  Mobile Footer Donation Centering
+==================================================================*/
+
+/* Center donation section on mobile */
 @media (max-width: 767px) {
+  /* Center the entire donation section */
+  .donate-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Center QR container */
   .donate-qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Ensure QR image is centered */
+  .donate-qr-container img {
+    display: block;
+    max-width: 120px !important;
+    margin: 0 auto;
+  }
+
+  /* Center QR caption text */
+  .donate-qr-container p {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Center and full-width the Donate Now button */
+  .donate-section a[href*="givebutter"] {
+    display: block !important;
+    width: 100%;
+    max-width: 250px;
+    margin: 15px auto !important;
+    text-align: center;
+  }
+
+  .donate-section .social-links h3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Extra small screens - ensure everything centers */
+@media (max-width: 575px) {
+  .donate-qr-container {
+    max-width: 180px;
   }
 
   .donate-qr-container img {
-    max-width: 120px !important;
+    max-width: 110px !important;
+  }
+
+  .donate-section a[href*="givebutter"] {
+    max-width: 220px;
+    padding: 10px 20px;
+    font-size: 13px;
   }
 }
