@@ -2681,3 +2681,25 @@ header h2 {
     font-size: 13px;
   }
 }
+
+.icon-container {
+  display: flex; /* Aligns items in a row */
+  flex-direction: row; /* Forces horizontal layout */
+  flex-wrap: nowrap; /* Prevents wrapping to a new line */
+  gap: 10px; /* Sets even spacing between icons */
+  align-items: center;
+}
+
+/* Optional: Shrink icons slightly if they still feel tight */
+.icon-container a {
+  width: 32px; /* Adjust circle size */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #333; /* Matches your footer style */
+  color: white;
+  text-decoration: none;
+  font-size: 14px; /* Adjust icon size inside circle */
+}
